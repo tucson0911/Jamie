@@ -4,7 +4,7 @@ Working game title: Jamie. Dystopian psychological horror exploration; gameplay 
 
 ## Open the project
 
-1. Clone the repository with GitHub Desktop and ensure Git LFS is enabled. In a terminal inside the clone, run `git lfs install --local`, then `git lfs pull`.
+1. Clone the repository with GitHub and ensure Git LFS is enabled. In a terminal inside the clone, run `git lfs install --local`, then `git lfs pull`.
 2. Install the exact Editor version recorded in `ProjectSettings/ProjectVersion.txt`. Proposed initial baseline: **6000.3.26f1 (Unity 6.3 LTS)** with the Universal 2D template. Update this paragraph if the team chooses a different initial baseline.
 3. In Unity Hub, add the cloned project folder from disk. Let package resolution and asset import finish.
 4. Open `Assets/_Game/Scenes/Showcase.unity` once that scene has been created, then enter Play mode.
