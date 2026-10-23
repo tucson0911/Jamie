@@ -1,6 +1,5 @@
 ## Change and purpose
 
-Describe the player-facing result or team need.
 
 ## Checked
 
