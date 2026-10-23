@@ -21,7 +21,7 @@ The first blockout has five connected rooms, open doorways, colliding walls/furn
 | F | Toggle flashlight |
 | R | Return to the starting position |
 
-The current build scene is `Playfield.unity`; the prototype build target is Windows x64. Local exported builds belong under ignored `Builds/`. See [playfield notes](Docs/PLAYFIELD.md) for editing and verification. The older `Showcase.unity` and template `SampleScene.unity` are preserved.
+The current build scene is `Playfield.unity`; the prototype build target is Windows x64. Local exported builds belong under ignored `Builds/`.
 
 ## Team
 
@@ -46,8 +46,4 @@ Art originals live in `SourceAssets/Art/`; game exports in `Assets/_Game/Art/`. 
 - **November 2, 2026:** first playable showcase.
 - **December 11, 2026, 16:00:** final submission.
 
-Intermediate dates are flexible planning targets. Before the showcase, write the controls, scene to open, build target and any known blockers here. Keep builds under ignored `Builds/` and share a complete zipped build through the team's agreed delivery location.
 
-## Agreed art/import settings
-
-The placeholder sprites use 32 pixels per unit, point filtering, and centred pivots. The camera is orthographic and looks at the XY playfield. These are prototype settings; agree final art scale, palette, resolution and naming before producing final assets. Preserve existing import settings when updating an asset.
