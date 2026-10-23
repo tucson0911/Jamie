@@ -77,3 +77,7 @@ crashlytics-build.properties
 .env
 .env.*
 !.env.example
+
+# Unity Version Control / Plastic workspace
+/.plastic/
+/ignore.conf
