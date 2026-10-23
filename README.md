@@ -1,15 +1,27 @@
 # Final project - Team Satanical Babies
 
-Working game title: Jamie. Dystopian psychological horror exploration; gameplay direction remains under development.
+Working game title: Jamie. Dystopian psychological horror exploration. The team has confirmed a top-down view, with Darkwood as a camera/control reference; story and gameplay details remain under development.
 
 ## Open the project
 
 1. Clone the repository with GitHub and ensure Git LFS is enabled. In a terminal inside the clone, run `git lfs install --local`, then `git lfs pull`.
 2. Install the exact Editor version recorded in `ProjectSettings/ProjectVersion.txt`. Proposed initial baseline: **6000.3.27f1 (Unity 6.3 LTS)** with the Universal 2D template. Update this paragraph if the team chooses a different initial baseline.
 3. In Unity Hub, add the cloned project folder from disk. Let package resolution and asset import finish.
-4. Open `Assets/_Game/Scenes/Showcase.unity` once that scene has been created, then enter Play mode.
+4. Open `Assets/_Game/Scenes/Playfield.unity`, then enter Play mode. Click the Game view to give it keyboard/mouse focus.
 
-Controls and build platform: record the implemented choices here before sharing the first playable.
+## Placeholder playfield
+
+The first blockout has five connected rooms, open doorways, colliding walls/furniture, a mouse-aimed player, a following camera, and a toggleable 2D flashlight with shadows. All scene objects and simple placeholder sprites are editable in Unity. There are no enemies, story progression, or interaction systems yet.
+
+| Input | Action |
+| --- | --- |
+| WASD or arrow keys | Move |
+| Mouse | Aim / face the cursor |
+| Hold Shift | Sprint |
+| F | Toggle flashlight |
+| R | Return to the starting position |
+
+The current build scene is `Playfield.unity`; the prototype build target is Windows x64. Local exported builds belong under ignored `Builds/`. See [playfield notes](Docs/PLAYFIELD.md) for editing and verification. The older `Showcase.unity` and template `SampleScene.unity` are preserved.
 
 ## Team
 
@@ -38,4 +50,4 @@ Intermediate dates are flexible planning targets. Before the showcase, write the
 
 ## Agreed art/import settings
 
-Fill in after the first scene sample: sprite scale/pixels per unit, filtering, pivot conventions, reference resolution, camera direction, and asset naming. Preserve existing import settings when updating an asset.
+The placeholder sprites use 32 pixels per unit, point filtering, and centred pivots. The camera is orthographic and looks at the XY playfield. These are prototype settings; agree final art scale, palette, resolution and naming before producing final assets. Preserve existing import settings when updating an asset.
