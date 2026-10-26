@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 
@@ -18,7 +19,7 @@ namespace Jamie
         private Vector2 spawn;
         private bool sprinting;
         private int oxygenMinutes;
-        private int oxygenSeconds
+        private int oxygenSeconds;
 
         public bool FlashlightEnabled => flashlight != null && flashlight.enabled;
         public Vector2 FacingDirection => facing != null ? (Vector2)facing.up : Vector2.up;
@@ -65,19 +66,28 @@ namespace Jamie
             }
         }
 
+        private void OxygenDeath() {
+            Debug.Log("Player is very dead :(");
+        }
+
         private void Start() {
+            oxygenMinutes = 0;
+            oxygenSeconds = 10;
             Debug.unityLogger.logEnabled = true;
-            Debug.log("PLEAAAAASSE");
-            InvokeRepeating("DecrementOxygen", 1.0f, 1.0f);print
+            InvokeRepeating("DecrementOxygen", 1.0f, 1.0f);
         }
 
         private void DecrementOxygen() {
-            Debug.log(oxygenMinutes + ":" + oxygenSeconds);
+            Debug.Log(oxygenMinutes + ":" + oxygenSeconds); // Display timer to console
+
+            if (oxygenSeconds <= 0 && oxygenMinutes <= 0) {
+                OxygenDeath();
+            }
             if (oxygenSeconds > 0) {
                 oxygenSeconds--;
             } else {
                 oxygenMinutes--;
-                oxygenSeconds = 60; // Reset seconds counter to a minute
+                oxygenSeconds = 60 - 1; // Reset seconds counter to a minute with one deducted for consistant time
             }
         }
 
