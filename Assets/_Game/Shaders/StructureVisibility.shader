@@ -1,0 +1,236 @@
+Shader "Jamie/Structure Visibility"
+{
+    Properties
+    {
+        _MainTex("Diffuse", 2D) = "white" {}
+        _MaskTex("Mask", 2D) = "white" {}
+        _NormalMap("Normal Map", 2D) = "bump" {}
+        [MaterialToggle] _ZWrite("ZWrite", Float) = 0
+
+        // Legacy properties. They're here so that materials using this shader can gracefully fallback to the legacy sprite shader.
+        [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
+        [HideInInspector] _RendererColor("RendererColor", Color) = (1,1,1,1)
+        [HideInInspector] _AlphaTex("External Alpha", 2D) = "white" {}
+        [HideInInspector] _EnableExternalAlpha("Enable External Alpha", Float) = 0
+    }
+
+    SubShader
+    {
+        Tags {"Queue" = "Transparent" "RenderType" = "Transparent" "RenderPipeline" = "UniversalPipeline" }
+
+        Blend SrcAlpha OneMinusSrcAlpha, One OneMinusSrcAlpha
+        Cull Off
+        ZWrite [_ZWrite]
+
+        Pass
+        {
+            Tags { "LightMode" = "Universal2D" }
+
+            HLSLPROGRAM
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Core2D.hlsl"
+
+            #pragma vertex LitVertex
+            #pragma fragment LitFragment
+
+            #include_with_pragmas "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/ShapeLightShared.hlsl"
+
+            // GPU Instancing
+            #pragma multi_compile_instancing
+            #pragma multi_compile _ DEBUG_DISPLAY
+            #pragma multi_compile _ SKINNED_SPRITE
+
+            struct Attributes
+            {
+                COMMON_2D_INPUTS
+                half4 color        : COLOR;
+                UNITY_SKINNED_VERTEX_INPUTS
+            };
+
+            struct Varyings
+            {
+                COMMON_2D_LIT_OUTPUTS
+                half4 color : COLOR;
+                float2 worldPosition : TEXCOORD4;
+            };
+
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Lit2DCommon.hlsl"
+
+            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
+            CBUFFER_START(UnityPerMaterial)
+                half4 _Color;
+            CBUFFER_END
+
+            TEXTURE2D(_JamieExploredTexture);
+            SAMPLER(sampler_JamieExploredTexture);
+
+            float4 _JamieExplorationRect;
+            float _JamieMemoryEnabled;
+            float _JamieMemoryCapture;
+
+            Varyings LitVertex(Attributes input)
+            {
+                UNITY_SKINNED_VERTEX_COMPUTE(input);
+                SetUpSpriteInstanceProperties();
+                input.positionOS = UnityFlipSprite(input.positionOS, unity_SpriteProps.xy);
+
+                Varyings o = CommonLitVertex(input);
+                o.color = input.color * _Color * unity_SpriteColor;
+                o.worldPosition = TransformObjectToWorld(input.positionOS).xy;
+
+                return o;
+            }
+
+            half4 LitFragment(Varyings input) : SV_Target
+            {
+                half4 result = CommonLitFragment(input, input.color);
+                half visibility = 0.0h;
+
+            #if USE_SHAPE_LIGHT_TYPE_1
+                half3 light = SAMPLE_TEXTURE2D(
+                    _ShapeLightTexture1,
+                    sampler_ShapeLightTexture1,
+                    input.lightingUV).rgb;
+
+                half brightness = max(light.r, max(light.g, light.b));
+                visibility = smoothstep(0.02h, 0.10h, brightness);
+            #endif
+
+                if (_JamieMemoryCapture > 0.5)
+                {
+                    return half4(1.0h, 1.0h, 1.0h, result.a * visibility);
+                }
+
+                if (_JamieMemoryEnabled > 0.5)
+                {
+                    float2 mapSize = max(
+                        _JamieExplorationRect.zw,
+                        float2(0.001, 0.001));
+
+                    float2 memoryUV =
+                        (input.worldPosition - _JamieExplorationRect.xy) / mapSize;
+
+                    half explored = 0.0h;
+
+                    if (all(memoryUV >= 0.0) && all(memoryUV <= 1.0))
+                    {
+                        explored = SAMPLE_TEXTURE2D_LOD(
+                            _JamieExploredTexture,
+                            sampler_JamieExploredTexture,
+                            memoryUV,
+                            0).r;
+                    }
+
+                    result.rgb *= max(visibility, explored);
+                }
+
+                return result;
+            }
+            ENDHLSL
+        }
+
+        Pass
+        {
+            Tags { "LightMode" = "NormalsRendering"}
+
+            HLSLPROGRAM
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Core2D.hlsl"
+
+            #pragma vertex NormalsRenderingVertex
+            #pragma fragment NormalsRenderingFragment
+
+            // GPU Instancing
+            #pragma multi_compile_instancing
+            #pragma multi_compile _ SKINNED_SPRITE
+
+            struct Attributes
+            {
+                COMMON_2D_NORMALS_INPUTS
+                float4 color        : COLOR;
+                UNITY_SKINNED_VERTEX_INPUTS
+            };
+
+            struct Varyings
+            {
+                COMMON_2D_NORMALS_OUTPUTS
+                half4   color           : COLOR;
+            };
+
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Normals2DCommon.hlsl"
+
+            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
+            CBUFFER_START( UnityPerMaterial )
+                half4 _Color;
+            CBUFFER_END
+
+            Varyings NormalsRenderingVertex(Attributes input)
+            {
+                UNITY_SKINNED_VERTEX_COMPUTE(input);
+                SetUpSpriteInstanceProperties();
+                input.positionOS = UnityFlipSprite(input.positionOS, unity_SpriteProps.xy);
+
+                Varyings o = CommonNormalsVertex(input);
+                o.color = input.color * _Color * unity_SpriteColor;
+
+                return o;
+            }
+
+            half4 NormalsRenderingFragment(Varyings input) : SV_Target
+            {
+                return CommonNormalsFragment(input, input.color);
+            }
+            ENDHLSL
+        }
+
+        Pass
+        {
+            Tags { "LightMode" = "UniversalForward" "Queue"="Transparent" "RenderType"="Transparent"}
+
+            HLSLPROGRAM
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Core2D.hlsl"
+
+            #pragma vertex UnlitVertex
+            #pragma fragment UnlitFragment
+
+            struct Attributes
+            {
+                COMMON_2D_INPUTS
+                half4 color : COLOR;
+                UNITY_SKINNED_VERTEX_INPUTS
+            };
+
+            struct Varyings
+            {
+                COMMON_2D_OUTPUTS
+                half4 color : COLOR;
+            };
+
+            #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/2DCommon.hlsl"
+          
+            // GPU Instancing
+            #pragma multi_compile_instancing
+            #pragma multi_compile _ DEBUG_DISPLAY SKINNED_SPRITE
+
+            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
+            CBUFFER_START(UnityPerMaterial)
+                half4 _Color;
+            CBUFFER_END
+
+            Varyings UnlitVertex(Attributes input)
+            {
+                UNITY_SKINNED_VERTEX_COMPUTE(input);
+                SetUpSpriteInstanceProperties();
+                input.positionOS = UnityFlipSprite(input.positionOS, unity_SpriteProps.xy);
+
+                Varyings o = CommonUnlitVertex(input);
+                o.color = input.color *_Color * unity_SpriteColor;
+                return o;
+            }
+
+            half4 UnlitFragment(Varyings input) : SV_Target
+            {
+                return CommonUnlitFragment(input, input.color);
+            }
+            ENDHLSL
+        }
+    }
+}
