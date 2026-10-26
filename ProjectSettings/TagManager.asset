@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - MemoryCapture
   - 
   - 
   - 
@@ -41,3 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 2581372315
+    locked: 0
+  - name: Props
+    uniqueID: 1083348519
+    locked: 0
+  - name: Walls
+    uniqueID: 437164121
+    locked: 0
+  - name: Player
+    uniqueID: 1441128245
+    locked: 0
+  - name: Labels
+    uniqueID: 2286175429
+    locked: 0
+  m_RenderingLayers:
+  - Default
