@@ -17,6 +17,8 @@ namespace Jamie
         private Vector2 movement;
         private Vector2 spawn;
         private bool sprinting;
+        private int oxygenMinutes;
+        private int oxygenSeconds
 
         public bool FlashlightEnabled => flashlight != null && flashlight.enabled;
         public Vector2 FacingDirection => facing != null ? (Vector2)facing.up : Vector2.up;
@@ -60,6 +62,22 @@ namespace Jamie
                 Vector2 direction = target - (Vector2)transform.position;
                 if (direction.sqrMagnitude > 0.01f)
                     facing.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
+            }
+        }
+
+        private void Start() {
+            Debug.unityLogger.logEnabled = true;
+            Debug.log("PLEAAAAASSE");
+            InvokeRepeating("DecrementOxygen", 1.0f, 1.0f);print
+        }
+
+        private void DecrementOxygen() {
+            Debug.log(oxygenMinutes + ":" + oxygenSeconds);
+            if (oxygenSeconds > 0) {
+                oxygenSeconds--;
+            } else {
+                oxygenMinutes--;
+                oxygenSeconds = 60; // Reset seconds counter to a minute
             }
         }
 
