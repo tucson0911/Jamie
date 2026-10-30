@@ -4,6 +4,9 @@ Shader "Jamie/Exploration Accumulate"
     {
         _CurrentVisibility("Current Visibility", 2D) = "black" {}
         _PreviousMemory("Previous Memory", 2D) = "black" {}
+        [HideInInspector] _MemoryTime("Memory Time", Float) = 0
+        [HideInInspector] _MemoryHoldTime("Memory Hold Time", Float) = 2
+        [HideInInspector] _MemoryFadeTime("Memory Fade Time", Float) = 3
     }
 
     SubShader
@@ -30,6 +33,12 @@ Shader "Jamie/Exploration Accumulate"
             TEXTURE2D(_PreviousMemory);
             SAMPLER(sampler_PreviousMemory);
 
+            CBUFFER_START(UnityPerMaterial)
+                float _MemoryTime;
+                float _MemoryHoldTime;
+                float _MemoryFadeTime;
+            CBUFFER_END
+
             struct Varyings
             {
                 float4 positionCS : SV_POSITION;
@@ -46,20 +55,46 @@ Shader "Jamie/Exploration Accumulate"
                 return output;
             }
 
-            half4 Frag(Varyings input) : SV_Target
+            float4 Frag(Varyings input) : SV_Target
             {
-                half current = SAMPLE_TEXTURE2D(
+                float current = SAMPLE_TEXTURE2D(
                     _CurrentVisibility,
                     sampler_CurrentVisibility,
                     input.uv).r;
 
-                half previous = SAMPLE_TEXTURE2D(
+                float4 previous = SAMPLE_TEXTURE2D(
                     _PreviousMemory,
                     sampler_PreviousMemory,
-                    input.uv).r;
+                    input.uv);
 
-                half explored = max(current, previous);
-                return half4(explored, explored, explored, 1.0h);
+                float lastSeen = previous.g;
+                float peak = previous.r > 0.0 ? previous.a : 0.0;
+
+                if (current > 0.001)
+                {
+                    lastSeen = _MemoryTime;
+                    peak = max(current, previous.b);
+                }
+
+                float age = max(0.0, _MemoryTime - lastSeen);
+                float fadeDuration = max(_MemoryFadeTime, 0.001);
+
+                float fade = 1.0 - smoothstep(
+                    _MemoryHoldTime,
+                    _MemoryHoldTime + fadeDuration,
+                    age);
+
+                float fadingMemory = peak * fade;
+                float permanentMemory = max(current, previous.r);
+
+                if (fade <= 0.0)
+                    peak = 0.0;
+
+                return float4(
+                    permanentMemory,
+                    lastSeen,
+                    fadingMemory,
+                    peak);
             }
             ENDHLSL
         }
