@@ -9,12 +9,32 @@ namespace Jamie
         public enum LayoutVisibilityMode
         {
             VisibleFromStart,
-            RememberExplored
+            RememberExplored,
+            FadingMemory
         }
 
         [SerializeField] private Material accumulationMaterial = null;
         [SerializeField] private LayoutVisibilityMode mode =
             LayoutVisibilityMode.VisibleFromStart;
+        [SerializeField, Min(0f)] private float memoryHoldTime = 2f;
+        [SerializeField, Min(0.1f)] private float memoryFadeTime = 3f;
+        [SerializeField, Range(0f, 3f)]
+        private float memoryEdgeSoftness = 1.5f;
+
+        [Header("Wall Memory")]
+        [SerializeField, Range(0f, 0.03f)]
+        private float wallMemoryBrightness = 0.005f;
+
+        [SerializeField, Range(0.5f, 4f)]
+        private float wallMemoryWidth = 1.5f;
+        [SerializeField, Range(0f, 2f)]
+        private float wallMemorySoftness = 1f;
+
+        [SerializeField, Range(0f, 2f)]
+        private float wallMemoryWobble = 0.5f;
+
+        [SerializeField, Range(0f, 2f)]
+        private float wallMemoryWobbleSpeed = 0.5f;    
 
         private static readonly int CaptureId =
             Shader.PropertyToID("_JamieMemoryCapture");
@@ -28,6 +48,31 @@ namespace Jamie
             Shader.PropertyToID("_CurrentVisibility");
         private static readonly int PreviousMemoryId =
             Shader.PropertyToID("_PreviousMemory");
+        private static readonly int MemoryTimeId =
+            Shader.PropertyToID("_MemoryTime");
+        private static readonly int MemoryHoldTimeId =
+            Shader.PropertyToID("_MemoryHoldTime");
+        private static readonly int MemoryFadeTimeId =
+            Shader.PropertyToID("_MemoryFadeTime");
+        private static readonly int UseFadingMemoryId =
+        Shader.PropertyToID("_JamieUseFadingMemory");
+        private static readonly int MemorySoftnessId =
+        Shader.PropertyToID("_JamieMemorySoftness");
+        private static readonly int MemoryTexelSizeId =
+        Shader.PropertyToID("_JamieMemoryTexelSize");
+        private static readonly int WallCaptureTextureId =
+        Shader.PropertyToID("_JamieWallCaptureTexture");
+        private static readonly int WallMemoryBrightnessId =
+        Shader.PropertyToID("_JamieWallMemoryBrightness");
+        private static readonly int WallMemoryWidthId =
+        Shader.PropertyToID("_JamieWallMemoryWidth");
+        private static readonly int WallMemorySoftnessId =
+        Shader.PropertyToID("_JamieWallMemorySoftness");
+        private static readonly int WallMemoryWobbleId =
+        Shader.PropertyToID("_JamieWallMemoryWobble");
+        private static readonly int WallMemoryWobbleSpeedId =
+        Shader.PropertyToID("_JamieWallMemoryWobbleSpeed");
+                
 
         private Camera captureCamera;
         private RenderTexture memoryRead;
@@ -75,7 +120,14 @@ namespace Jamie
 
             Shader.SetGlobalFloat(CaptureId, 0f);
             Shader.SetGlobalFloat(MemoryEnabledId, 0f);
+            Shader.SetGlobalFloat(UseFadingMemoryId, 0f);
             Shader.SetGlobalTexture(ExploredTextureId, Texture2D.blackTexture);
+            Shader.SetGlobalFloat(MemorySoftnessId, 0f);
+            Shader.SetGlobalTexture(WallCaptureTextureId, Texture2D.blackTexture);
+            Shader.SetGlobalFloat(WallMemoryBrightnessId, 0f);
+            Shader.SetGlobalFloat(WallMemorySoftnessId, 0f);
+            Shader.SetGlobalFloat(WallMemoryWobbleId, 0f);
+            Shader.SetGlobalFloat(WallMemoryWobbleSpeedId, 0f);
 
             ReleaseMemoryTexture(memoryRead);
             ReleaseMemoryTexture(memoryWrite);
@@ -94,10 +146,31 @@ namespace Jamie
                 CaptureId, camera == captureCamera ? 1f : 0f);
             command.SetGlobalFloat(
                 MemoryEnabledId,
-                mode == LayoutVisibilityMode.RememberExplored ? 1f : 0f);
+                mode == LayoutVisibilityMode.VisibleFromStart ? 0f : 1f);
+            command.SetGlobalFloat(
+                UseFadingMemoryId,
+                mode == LayoutVisibilityMode.FadingMemory ? 1f : 0f);
             command.SetGlobalTexture(ExploredTextureId, memoryRead);
             command.SetGlobalVector(ExplorationRectId, explorationRect);
+            command.SetGlobalFloat(MemorySoftnessId, memoryEdgeSoftness);
+            command.SetGlobalVector(
+                MemoryTexelSizeId,
+                new Vector4(
+                    1f / memoryRead.width,
+                    1f / memoryRead.height,
+                    memoryRead.width,
+                    memoryRead.height));
+            Texture wallCapture = Texture2D.blackTexture;
 
+            if (camera != captureCamera)
+                wallCapture = captureCamera.targetTexture;
+
+            command.SetGlobalTexture(WallCaptureTextureId, wallCapture);
+            command.SetGlobalFloat(WallMemoryBrightnessId, wallMemoryBrightness);
+            command.SetGlobalFloat(WallMemoryWidthId, wallMemoryWidth);
+            command.SetGlobalFloat(WallMemorySoftnessId, wallMemorySoftness);
+            command.SetGlobalFloat(WallMemoryWobbleId, wallMemoryWobble);
+            command.SetGlobalFloat(WallMemoryWobbleSpeedId, wallMemoryWobbleSpeed);    
             context.ExecuteCommandBuffer(command);
             CommandBufferPool.Release(command);
         }
@@ -111,6 +184,9 @@ namespace Jamie
             accumulationProperties.SetTexture(
                 CurrentVisibilityId, captureCamera.targetTexture);
             accumulationProperties.SetTexture(PreviousMemoryId, memoryRead);
+            accumulationProperties.SetFloat(MemoryTimeId, Time.time);
+            accumulationProperties.SetFloat(MemoryHoldTimeId, memoryHoldTime);
+            accumulationProperties.SetFloat(MemoryFadeTimeId, memoryFadeTime);
 
             CommandBuffer command = CommandBufferPool.Get();
             command.SetGlobalFloat(CaptureId, 0f);
@@ -143,7 +219,7 @@ namespace Jamie
 
             RenderTexture texture = new RenderTexture(
                 source.width, source.height, 0,
-                RenderTextureFormat.ARGB32,
+                RenderTextureFormat.ARGBFloat,
                 RenderTextureReadWrite.Linear)
             {
                 name = textureName,
@@ -165,7 +241,7 @@ namespace Jamie
 
             RenderTexture previous = RenderTexture.active;
             RenderTexture.active = texture;
-            GL.Clear(false, true, Color.black);
+            GL.Clear(false, true, Color.clear);
             RenderTexture.active = previous;
         }
 
