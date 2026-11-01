@@ -168,6 +168,8 @@ MonoBehaviour:
 
     dsfgdsfjigdsfljkgdsjgfdsfjksg'
   noteImage: {fileID: 2679450770238305592, guid: d81f11a920ffbb13bb299ff0cbec18c8, type: 3}
+  noteImageWidth: 900
+  noteImageHeight: 600
 --- !u!65 &7799921946253348513
 BoxCollider:
   m_ObjectHideFlags: 0

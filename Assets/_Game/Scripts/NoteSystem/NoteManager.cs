@@ -47,6 +47,11 @@ public class NoteManager : MonoBehaviour
             {
                 noteUIImage.gameObject.SetActive(true);
                 noteUIImage.sprite = note.noteImage; // Pulls the image straight from the NoteItem data
+
+                Vector2 size = noteUIImage.rectTransform.sizeDelta;
+                size.x = note.noteImageWidth;
+                size.y = note.noteImageHeight;
+                noteUIImage.rectTransform.sizeDelta = size;
             }
             else
             {
