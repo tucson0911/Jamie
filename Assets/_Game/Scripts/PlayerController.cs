@@ -39,6 +39,12 @@ namespace Jamie
 
         private void Update()
         {
+            if (Time.timeScale <= 0f)
+            {
+                movement = Vector2.zero;
+                sprinting = false;
+                return;
+            }
             Keyboard keyboard = Keyboard.current;
             movement = Vector2.zero;
             sprinting = false;
@@ -101,6 +107,22 @@ namespace Jamie
             movement = Vector2.zero;
             if (body != null)
                 body.linearVelocity = Vector2.zero;
+        }
+
+        public void RespawnAt(Vector2 position)
+        {
+            if (body == null)
+                body = GetComponent<Rigidbody2D>();
+
+            body.position = position;
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0f;
+            movement = Vector2.zero;
+            sprinting = false;
+
+            transform.position = new Vector3(
+                position.x, position.y, transform.position.z);
+            Physics2D.SyncTransforms();
         }
 
         public void ResetToSpawn()
