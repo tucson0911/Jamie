@@ -36,3 +36,7 @@
 
 # Small PNG exports use normal Git. Add specific large binaries before their first commit.
 # Do not put scenes, prefabs, scripts or .meta files into LFS.
+
+#FMOD
+Assets/Plugins/FMOD/**/*.bundle text eol=lf
+Assets/Plugins/FMOD/**/Info.plist text eol=lf
