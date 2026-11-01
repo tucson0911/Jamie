@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Josh_MondayPlayable.unity
+    guid: 8420e67d6ba328845b59fe16dd47be7a
+  - enabled: 0
     path: Assets/_Game/Scenes/Playfield.unity
     guid: 394dde009b187e449ba4c19c4f941a52
   m_configObjects:
