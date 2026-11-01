@@ -9,4 +9,6 @@ public class NoteItem : MonoBehaviour
     public string noteBody;
 
     public Sprite noteImage;
+    public float noteImageWidth;
+    public float noteImageHeight;
 }
