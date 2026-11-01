@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
 
@@ -17,6 +18,8 @@ namespace Jamie
         private Vector2 movement;
         private Vector2 spawn;
         private bool sprinting;
+        private int oxygenMinutes;
+        private int oxygenSeconds;
 
         public bool FlashlightEnabled => flashlight != null && flashlight.enabled;
         public Vector2 FacingDirection => facing != null ? (Vector2)facing.up : Vector2.up;
@@ -60,6 +63,31 @@ namespace Jamie
                 Vector2 direction = target - (Vector2)transform.position;
                 if (direction.sqrMagnitude > 0.01f)
                     facing.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
+            }
+        }
+
+        private void OxygenDeath() {
+            Debug.Log("Player is very dead :(");
+        }
+
+        private void Start() {
+            oxygenMinutes = 0;
+            oxygenSeconds = 10;
+            Debug.unityLogger.logEnabled = true;
+            InvokeRepeating("DecrementOxygen", 1.0f, 1.0f);
+        }
+
+        private void DecrementOxygen() {
+            Debug.Log(oxygenMinutes + ":" + oxygenSeconds); // Display timer to console
+
+            if (oxygenSeconds <= 0 && oxygenMinutes <= 0) {
+                OxygenDeath();
+            }
+            if (oxygenSeconds > 0) {
+                oxygenSeconds--;
+            } else {
+                oxygenMinutes--;
+                oxygenSeconds = 60 - 1; // Reset seconds counter to a minute with one deducted for consistant time
             }
         }
 
