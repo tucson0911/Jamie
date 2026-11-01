@@ -14,6 +14,11 @@ namespace Jamie
 
         private void OnGUI()
         {
+            if (Time.timeScale <= 0f)
+            {
+                return;
+            }
+
             if (title == null)
             {
                 title = new GUIStyle(GUI.skin.label) { fontSize = 28, fontStyle = FontStyle.Bold };

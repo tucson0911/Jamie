@@ -6,6 +6,8 @@ Shader "Jamie/Flashlight Reveal"
         _MaskTex("Mask", 2D) = "white" {}
         _NormalMap("Normal Map", 2D) = "bump" {}
         [MaterialToggle] _ZWrite("ZWrite", Float) = 0
+        _HighlightColor("Highlight Color", Color) = (1, 0.9, 0.65, 1)
+        _HighlightStrength("Highlight Strength", Range(0, 1)) = 0
 
         // Legacy properties. They're here so that materials using this shader can gracefully fallback to the legacy sprite shader.
         [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
@@ -57,6 +59,8 @@ Shader "Jamie/Flashlight Reveal"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                half4 _HighlightColor;
+                float _HighlightStrength;
             CBUFFER_END
 
             Varyings LitVertex(Attributes input)
@@ -86,6 +90,8 @@ Shader "Jamie/Flashlight Reveal"
                 visibility = smoothstep(0.02h, 0.10h, brightness);
             #endif
 
+                result.rgb += _HighlightColor.rgb *
+                    (_HighlightStrength * visibility);
                 result.a *= visibility;
                 return result;
             }
@@ -124,6 +130,8 @@ Shader "Jamie/Flashlight Reveal"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START( UnityPerMaterial )
                 half4 _Color;
+                half4 _HighlightColor;
+                float _HighlightStrength;
             CBUFFER_END
 
             Varyings NormalsRenderingVertex(Attributes input)
@@ -177,6 +185,8 @@ Shader "Jamie/Flashlight Reveal"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                half4 _HighlightColor;
+                float _HighlightStrength;
             CBUFFER_END
 
             Varyings UnlitVertex(Attributes input)

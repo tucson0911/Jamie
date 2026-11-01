@@ -1,86 +1,135 @@
+using System.Collections.Generic;
+using Jamie;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class NoteInteractionHandler : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField] private LayerMask noteLayer;
-    [SerializeField] private float maxInteractionDistance = 3f;
+    [Header("References")]
+    [SerializeField] private PlayerController player = null;
+    [SerializeField] private Light2D flashlight = null;
 
-    private Camera topDownCamera;
-    private Transform playerTransform;
+    [Header("Interaction")]
+    [SerializeField] private LayerMask noteLayer = 1 << 3;
+    [SerializeField] private LayerMask obstacleLayers = (1 << 0) | (1 << 6);
+    [SerializeField, Min(0.1f)] private float maxInteractionDistance = 1.8f;
+
+    private readonly List<Collider2D> nearbyNotes = new List<Collider2D>(8);
+    private readonly List<RaycastHit2D> obstacleHits = new List<RaycastHit2D>(8);
+
+    public NoteItem CurrentTarget { get; private set; }
 
     private void Start()
     {
-        topDownCamera = Camera.main;
-        if (topDownCamera == null) Debug.LogError("Diagnostic: No Camera tagged with 'MainCamera' found!");
+        if (player == null || flashlight == null)
+            Debug.LogError("Assign Player and Flashlight on NoteInteraction.", this);
+    }
 
-        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
+    private void LateUpdate()
+    {
+        CurrentTarget = null;
+
+        if (player == null || flashlight == null ||
+            !player.isActiveAndEnabled || !flashlight.isActiveAndEnabled ||
+            flashlight.intensity <= 0f || Time.timeScale <= 0f ||
+            NoteManager.Instance == null)
+            return;
+
+        CurrentTarget = FindTarget();
+
+        Keyboard keyboard = Keyboard.current;
+        if (CurrentTarget != null && keyboard != null &&
+            keyboard.eKey.wasPressedThisFrame)
         {
-            playerTransform = playerObj.transform;
-        }
-        else
-        {
-            Debug.LogError("Diagnostic: No GameObject with the 'Player' tag found!");
+            NoteManager.Instance.OpenNote(CurrentTarget);
         }
     }
 
-    private void Update()
+    private NoteItem FindTarget()
     {
-        // 1. Check if the New Input System detects the mouse click at all
-        if (Mouse.current == null)
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(noteLayer);
+        filter.useTriggers = true;
+
+        nearbyNotes.Clear();
+        Physics2D.OverlapCircle(
+            (Vector2)player.transform.position,
+            maxInteractionDistance, filter, nearbyNotes);
+
+        NoteItem bestNote = null;
+        float bestDistanceSquared =
+            maxInteractionDistance * maxInteractionDistance;
+
+        foreach (Collider2D noteCollider in nearbyNotes)
         {
-            Debug.LogWarning("Diagnostic: Mouse.current is NULL! Input System is not picking up a mouse.");
-            return;
+            NoteItem note = noteCollider.GetComponentInParent<NoteItem>();
+            if (note == null || !note.isActiveAndEnabled)
+                continue;
+
+            Vector2 target = note.transform.position;
+            float distanceSquared =
+                (target - (Vector2)player.transform.position).sqrMagnitude;
+
+            if (distanceSquared > bestDistanceSquared ||
+                !IsInsideFlashlight(target) || !HasClearPath(note, target))
+                continue;
+
+            bestNote = note;
+            bestDistanceSquared = distanceSquared;
         }
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        return bestNote;
+    }
+
+    private bool IsInsideFlashlight(Vector2 target)
+    {
+        Vector2 direction = target - (Vector2)flashlight.transform.position;
+        float radius = flashlight.pointLightOuterRadius;
+
+        if (direction.sqrMagnitude > radius * radius)
+            return false;
+
+        if (direction.sqrMagnitude < 0.0001f)
+            return true;
+
+        return Vector2.Angle(
+            (Vector2)flashlight.transform.up, direction)
+            <= flashlight.pointLightOuterAngle * 0.5f;
+    }
+
+    private bool HasClearPath(NoteItem note, Vector2 target)
+    {
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(obstacleLayers);
+        filter.useTriggers = false;
+
+        obstacleHits.Clear();
+        Physics2D.Linecast(
+            (Vector2)flashlight.transform.position,
+            target, filter, obstacleHits);
+
+        foreach (RaycastHit2D hit in obstacleHits)
         {
-            Debug.Log("Diagnostic: Mouse left click registered!");
+            Transform hitTransform = hit.collider.transform;
 
-            if (topDownCamera == null || playerTransform == null)
-            {
-                Debug.LogWarning("Diagnostic: Camera or Player reference is missing, skipping raycast.");
-                return;
-            }
+            if (hitTransform == player.transform ||
+                hitTransform.IsChildOf(player.transform))
+                continue;
 
-            Ray ray = topDownCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            RaycastHit hit;
+            if (hitTransform == note.transform ||
+                hitTransform.IsChildOf(note.transform))
+                continue;
 
-            // Temporarily removed noteLayer filter to see EVERYTHING the ray hits
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-            {
-                Debug.Log($"Diagnostic: Raycast hit object named '{hit.collider.gameObject.name}' on layer '{LayerMask.LayerToName(hit.collider.gameObject.layer)}'");
-
-                // Check if it has the NoteItem component
-                NoteItem clickedNote = hit.collider.GetComponent<NoteItem>();
-                if (clickedNote != null)
-                {
-                    Debug.Log($"Diagnostic: SUCCESS! Hit a NoteItem named '{clickedNote.noteTitle}'");
-
-                    float distanceToPlayer = Vector3.Distance(playerTransform.position, clickedNote.transform.position);
-                    Debug.Log($"Diagnostic: Distance to player is {distanceToPlayer:F2} (Max allowed: {maxInteractionDistance})");
-
-                    if (distanceToPlayer <= maxInteractionDistance)
-                    {
-                        Debug.Log("Diagnostic: Distance check passed. Opening note!");
-                        NoteManager.Instance.OpenNote(clickedNote);
-                    }
-                    else
-                    {
-                        Debug.Log("Diagnostic: Distance check FAILED - Player is too far away.");
-                    }
-                }
-                else
-                {
-                    Debug.Log($"Diagnostic: Hit '{hit.collider.gameObject.name}', but it does NOT have a NoteItem component attached.");
-                }
-            }
-            else
-            {
-                Debug.Log("Diagnostic: Raycast hit NOTHING. It shot out into empty space or missed all colliders.");
-            }
+            return false;
         }
+
+        return true;
+    }
+
+    private void OnDisable()
+    {
+        CurrentTarget = null;
     }
 }
+

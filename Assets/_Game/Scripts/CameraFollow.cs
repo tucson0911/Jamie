@@ -27,10 +27,22 @@ namespace Jamie
 
         private void LateUpdate()
         {
-            if (target == null)
+            if (target == null || Time.deltaTime <= 0f)
                 return;
             transform.position = Vector3.SmoothDamp(transform.position, BoundedPosition(target.position),
                 ref velocity, smoothTime);
+        }
+
+        public void SnapToTarget()
+        {
+            if (target == null)
+                return;
+
+            if (viewCamera == null)
+                viewCamera = GetComponent<Camera>();
+
+            velocity = Vector3.zero;
+            transform.position = BoundedPosition(target.position);
         }
 
         private Vector3 BoundedPosition(Vector3 position)

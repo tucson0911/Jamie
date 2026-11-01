@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NoteItem : MonoBehaviour
 {
@@ -11,4 +12,7 @@ public class NoteItem : MonoBehaviour
     public Sprite noteImage;
     public float noteImageWidth;
     public float noteImageHeight;
+
+    [Header("After Reading")]
+    public UnityEvent onFinishedReading = new UnityEvent();
 }
