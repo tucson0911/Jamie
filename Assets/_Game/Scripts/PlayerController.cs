@@ -12,6 +12,7 @@ namespace Jamie
         [SerializeField, Min(0.1f)] private float sprintSpeed = 4.8f;
         [SerializeField] private Camera viewCamera;
         [SerializeField] private Transform facing;
+        [SerializeField] private Light2D visionCone;
         [SerializeField] private Light2D flashlight;
 
         private Rigidbody2D body;
@@ -21,14 +22,14 @@ namespace Jamie
         private int oxygenMinutes;
         private int oxygenSeconds;
 
-        public bool FlashlightEnabled => flashlight != null && flashlight.enabled;
+        public bool FlashlightEnabled => visionCone != null && flashlight.enabled;
         public Vector2 FacingDirection => facing != null ? (Vector2)facing.up : Vector2.up;
 
         public void Configure(Camera camera, Transform visual, Light2D light)
         {
             viewCamera = camera;
             facing = visual;
-            flashlight = light;
+            visionCone = light;
         }
 
         private void Awake()
@@ -57,8 +58,8 @@ namespace Jamie
                 movement = Vector2.ClampMagnitude(movement, 1f);
                 sprinting = keyboard.leftShiftKey.isPressed || keyboard.rightShiftKey.isPressed;
 
-                if (keyboard.fKey.wasPressedThisFrame && flashlight != null)
-                    flashlight.enabled = !flashlight.enabled;
+                if (keyboard.fKey.wasPressedThisFrame && visionCone != null)
+                    visionCone.enabled = !flashlight.enabled;
                 if (keyboard.rKey.wasPressedThisFrame)
                     ResetToSpawn();
             }
