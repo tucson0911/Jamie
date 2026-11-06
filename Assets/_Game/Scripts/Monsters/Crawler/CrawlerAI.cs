@@ -4,7 +4,6 @@ using UnityEngine.AI; // Required for NavMeshAgent
 public class CrawlerAI : MonoBehaviour
 {
     [SerializeField] private VisionSensor visionSensor;  
-    [SerializeField] private WallSensor wallSensor;      
     [SerializeField] private NavMeshAgent agent;       // Reference to the NavMeshAgent
 
     [SerializeField] private float rotationSpeed = 5.0f;
@@ -31,13 +30,6 @@ public class CrawlerAI : MonoBehaviour
     {
         bool playerDetected = visionSensor != null && visionSensor.IsPlayerDetected;
         Transform targetPlayer = visionSensor != null ? visionSensor.DetectedPlayer : null;
-
-        // If we lose footing on the walls, immediately drop hunt mode
-        if (wallSensor != null && !wallSensor.HasValidFooting()) {
-            huntMode = false;
-            if (agent != null && agent.enabled) agent.isStopped = true;
-            return;
-        }
 
         if (playerDetected && targetPlayer != null) {
             huntMode = true;
