@@ -5,7 +5,6 @@ public class VisionSensor : MonoBehaviour
     [Header("Vision Parameters")]
     [SerializeField] private float visionRange = 5.0f;
     [SerializeField] private float visionAngle = 90f;
-    [SerializeField] private Transform playerTransform; // Optional: Auto-finds by tag "Player"
 
     [Header("Obstruction Settings")]
     [SerializeField] private LayerMask obstacleLayer; // Assign your "Wall" layer here in the Inspector
@@ -13,28 +12,35 @@ public class VisionSensor : MonoBehaviour
     [Header("Debug Visualization")]
     [SerializeField] private bool showGizmos = true;
 
+    // Cached reference found automatically via tag
+    private Transform playerTransform;
+
     // Public properties so other scripts can easily read the state
     public bool IsPlayerDetected { get; private set; } = false;
     public Transform DetectedPlayer => playerTransform;
 
-    void Start()
+    void Update()
     {
+        // Automatically find the player if not cached yet (handles late spawning/scene loads)
         if (playerTransform == null)
         {
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) playerTransform = playerObj.transform;
+            if (playerObj != null)
+            {
+                playerTransform = playerObj.transform;
+            }
+            else
+            {
+                IsPlayerDetected = false;
+                return; // Skip vision check until player exists
+            }
         }
-    }
 
-    void Update()
-    {
         IsPlayerDetected = CheckVision();
     }
 
     bool CheckVision()
     {
-        if (playerTransform == null) return false;
-
         Vector2 sensorPos = transform.position;
         Vector2 playerPos = playerTransform.position;
 
@@ -50,16 +56,14 @@ public class VisionSensor : MonoBehaviour
         if (angle > visionAngle / 2f) return false; // Player is outside the cone angle
 
         // 3. Check line of sight (Raycast to ensure no wall is blocking)
-        // We cast a ray from the sensor to the player, checking against the obstacle layer
         RaycastHit2D hit = Physics2D.Raycast(sensorPos, dirToPlayer, distanceToPlayer, obstacleLayer);
 
-        // If the ray hits something on the obstacle layer before reaching the player, a wall is blocking view
         if (hit.collider != null)
         {
             return false;
         }
 
-        return true; // Player is inside the cone AND visible (not blocked by a wall)
+        return true; // Player is inside the cone AND visible
     }
 
     // ==========================================
