@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class CorridorCrawler : MonoBehaviour
 {
     public enum LimbPositionType { Front, Back }
+    [Header("Front Limb Settings")]
+    [SerializeField] private float frontLookaheadDistance = 0.8f;
 
     [System.Serializable]
     public class Limb
@@ -20,6 +22,7 @@ public class CorridorCrawler : MonoBehaviour
         [HideInInspector] public Vector3 currentPos;
         [HideInInspector] public Vector3 targetPos;
         [HideInInspector] public bool isStepping = false;
+        
     }
 
     [Header("References")]
@@ -77,6 +80,11 @@ public class CorridorCrawler : MonoBehaviour
             if (bestWallPoint == Vector3.zero) 
             {
                 bestWallPoint = limb.targetPos; 
+            } 
+            else if (limb.positionType == LimbPositionType.Front)
+            {
+                // Project the front limb's target further up the corridor
+                bestWallPoint += (Vector3)forwardDir * frontLookaheadDistance;
             }
 
             Vector2 shoulderPos = limb.shoulderTransform.position;
