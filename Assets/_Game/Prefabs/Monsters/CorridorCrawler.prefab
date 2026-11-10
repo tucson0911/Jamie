@@ -575,6 +575,9 @@ MonoBehaviour:
   agent: {fileID: 5377975779442459521}
   rotationSpeed: 5
   aggroRange: 10
+  lostTargetTimeout: 10
+  patrolNodes: []
+  timeBeforeIdle: 5
 --- !u!50 &9114781825157560367
 Rigidbody2D:
   serializedVersion: 5
@@ -1011,9 +1014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00731449b7451dbf19f7cfa7193349af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VisionSensor
-  visionRange: 10
+  visionRange: 8.2
   visionAngle: 90
-  playerTransform: {fileID: 0}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 128
