@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7565327072019566313
 Transform:
   m_ObjectHideFlags: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85201716028278929}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -264,7 +264,7 @@ MonoBehaviour:
     m_TrimEdge: 0.02
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
@@ -456,7 +456,7 @@ MonoBehaviour:
     m_TrimEdge: 0.02
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
@@ -739,7 +739,7 @@ MonoBehaviour:
     m_TrimEdge: 0.02
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
@@ -931,7 +931,7 @@ MonoBehaviour:
     m_TrimEdge: 0.02
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
@@ -1123,7 +1123,7 @@ MonoBehaviour:
     m_TrimEdge: 0.02
     m_FlipX: 0
     m_FlipY: 0
-    m_InitialTrim: 0.02
+    m_InitialTrim: 0
   m_CastingOption: 1
   m_PreviousTrimEdge: 0.02
   m_PreviousEdgeProcessing: 1
