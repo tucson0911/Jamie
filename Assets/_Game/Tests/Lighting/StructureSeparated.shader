@@ -8,7 +8,6 @@ Shader "Jamie/Tests/Separated Structure"
         [MaterialToggle] _ZWrite("ZWrite", Float) = 0
         [ToggleUI] _JamieIsWall("Wall Surface", Float) = 0
 
-        // Legacy properties. For fallback usage.
         [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
         [HideInInspector] _RendererColor("RendererColor", Color) = (1,1,1,1)
         [HideInInspector] _AlphaTex("External Alpha", 2D) = "white" {}
@@ -35,7 +34,6 @@ Shader "Jamie/Tests/Separated Structure"
 
             #include_with_pragmas "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/ShapeLightShared.hlsl"
 
-            // GPU Instancing
             #pragma multi_compile_instancing
             #pragma multi_compile _ DEBUG_DISPLAY
             #pragma multi_compile _ SKINNED_SPRITE
@@ -57,7 +55,6 @@ Shader "Jamie/Tests/Separated Structure"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Lit2DCommon.hlsl"
             #include "SeparatedLighting.hlsl"
 
-            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
                 float _JamieIsWall;
@@ -277,7 +274,6 @@ Shader "Jamie/Tests/Separated Structure"
             #pragma vertex NormalsRenderingVertex
             #pragma fragment NormalsRenderingFragment
 
-            // GPU Instancing
             #pragma multi_compile_instancing
             #pragma multi_compile _ SKINNED_SPRITE
 
@@ -296,7 +292,6 @@ Shader "Jamie/Tests/Separated Structure"
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Normals2DCommon.hlsl"
 
-            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START( UnityPerMaterial )
                 half4 _Color;
                 float _JamieIsWall;
@@ -346,11 +341,9 @@ Shader "Jamie/Tests/Separated Structure"
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/2DCommon.hlsl"
           
-            // GPU Instancing
             #pragma multi_compile_instancing
             #pragma multi_compile _ DEBUG_DISPLAY SKINNED_SPRITE
 
-            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
                 float _JamieIsWall;
