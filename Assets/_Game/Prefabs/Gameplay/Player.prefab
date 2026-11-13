@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 5760288939457153650}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,6 +298,7 @@ MonoBehaviour:
   sprintSpeed: 4.8
   viewCamera: {fileID: 0}
   facing: {fileID: 845104597044217400}
+  visionCone: {fileID: 0}
   flashlight: {fileID: 8196801683439451407}
 --- !u!1 &2239105635854547478
 GameObject:

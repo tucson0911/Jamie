@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 0e74e985f1a88581da7c6ad9f6557064
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4129546121776174963
+    second: Jamie asset 5_0
+  - first:
+      213: 6254601223408039326
+    second: Jamie asset 5_1
+  - first:
+      213: 8126755505569222840
+    second: Jamie asset 5_2
+  - first:
+      213: -1967371975522040584
+    second: Jamie asset 5_3
+  - first:
+      213: 8809663560737533621
+    second: Jamie asset 5_4
+  - first:
+      213: -1194367347409610252
+    second: Jamie asset 5_5
+  - first:
+      213: 7976534146678490875
+    second: Jamie asset 5_6
+  - first:
+      213: 7422776629273479604
+    second: Jamie asset 5_7
+  - first:
+      213: 6029705496535042086
+    second: Jamie asset 5_8
+  - first:
+      213: -79950957599111720
+    second: Jamie asset 5_9
+  - first:
+      213: -1914103716322081940
+    second: Jamie asset 5_10
+  - first:
+      213: -4246668511740239343
+    second: Jamie asset 5_11
+  - first:
+      213: -5256929806748208845
+    second: Jamie asset 5_12
+  - first:
+      213: -7281947791970019720
+    second: Jamie asset 5_13
+  - first:
+      213: 8750577971333831545
+    second: Jamie asset 5_14
+  - first:
+      213: -7469791470388115900
+    second: Jamie asset 5_15
+  - first:
+      213: 1394341075429523391
+    second: Jamie asset 5_16
+  - first:
+      213: -1438637198915213809
+    second: Jamie asset 5_17
+  - first:
+      213: -5500018658381341606
+    second: Jamie asset 5_18
+  - first:
+      213: 3225399509549844110
+    second: Jamie asset 5_19
+  - first:
+      213: -235523842659633322
+    second: Jamie asset 5_20
+  - first:
+      213: 5602741813821651033
+    second: Jamie asset 5_21
+  - first:
+      213: -9113434722608651382
+    second: Jamie asset 5_22
+  - first:
+      213: -7535033082750514128
+    second: Jamie asset 5_23
+  - first:
+      213: 1963232899792494910
+    second: Jamie asset 5_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jamie asset 5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 783
+        width: 91
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8860f77ea7e0b6c0800000000000000
+      internalID: -4129546121776174963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_1
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 879
+        width: 190
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95b5f4acaeccc650800000000000000
+      internalID: 6254601223408039326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_2
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 863
+        width: 62
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b057ed231908c070800000000000000
+      internalID: 8126755505569222840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_3
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 833
+        width: 106
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f443f1ac9d72b4e0800000000000000
+      internalID: -1967371975522040584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 709
+        width: 12
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bea6783556324a70800000000000000
+      internalID: 8809663560737533621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 743
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9135eb931cc6fe0800000000000000
+      internalID: -1194367347409610252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_6
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 739
+        width: 116
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf68b8f7b8752be60800000000000000
+      internalID: 7976534146678490875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_7
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 737
+        width: 132
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b9caea4400030760800000000000000
+      internalID: 7422776629273479604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 617
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628013dc331dda350800000000000000
+      internalID: 6029705496535042086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_9
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 617
+        width: 74
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d54ad41705f3eef0800000000000000
+      internalID: -79950957599111720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_10
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 597
+        width: 152
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c630e55bfccbf65e0800000000000000
+      internalID: -1914103716322081940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_11
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 579
+        width: 208
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112e2e60d7dc015c0800000000000000
+      internalID: -4246668511740239343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 579
+        width: 76
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3313c937132ab07b0800000000000000
+      internalID: -5256929806748208845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_13
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 579
+        width: 78
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876dfaa801351fa90800000000000000
+      internalID: -7281947791970019720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 253
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97b16b86d4c407970800000000000000
+      internalID: 8750577971333831545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_15
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 505
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446064dfb38f55890800000000000000
+      internalID: -7469791470388115900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_16
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 497
+        width: 76
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf76b012d1b95310800000000000000
+      internalID: 1394341075429523391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_17
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 449
+        width: 208
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06eefdf61fe80ce0800000000000000
+      internalID: -1438637198915213809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 249
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cd829ab220ca3b0800000000000000
+      internalID: -5500018658381341606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_19
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 379
+        width: 130
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e860079d3cbe2cc20800000000000000
+      internalID: 3225399509549844110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_20
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 305
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657332e10504bbcf0800000000000000
+      internalID: -235523842659633322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 265
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958311dbeffe0cd40800000000000000
+      internalID: 5602741813821651033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_22
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 206
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a836333a763968180800000000000000
+      internalID: -9113434722608651382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_23
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 7
+        width: 134
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03cc6d3655f2e6790800000000000000
+      internalID: -7535033082750514128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jamie asset 5_24
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 3
+        width: 186
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31ed73bbedce3b10800000000000000
+      internalID: 1963232899792494910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jamie asset 5_0: -4129546121776174963
+      Jamie asset 5_1: 6254601223408039326
+      Jamie asset 5_10: -1914103716322081940
+      Jamie asset 5_11: -4246668511740239343
+      Jamie asset 5_12: -5256929806748208845
+      Jamie asset 5_13: -7281947791970019720
+      Jamie asset 5_14: 8750577971333831545
+      Jamie asset 5_15: -7469791470388115900
+      Jamie asset 5_16: 1394341075429523391
+      Jamie asset 5_17: -1438637198915213809
+      Jamie asset 5_18: -5500018658381341606
+      Jamie asset 5_19: 3225399509549844110
+      Jamie asset 5_2: 8126755505569222840
+      Jamie asset 5_20: -235523842659633322
+      Jamie asset 5_21: 5602741813821651033
+      Jamie asset 5_22: -9113434722608651382
+      Jamie asset 5_23: -7535033082750514128
+      Jamie asset 5_24: 1963232899792494910
+      Jamie asset 5_3: -1967371975522040584
+      Jamie asset 5_4: 8809663560737533621
+      Jamie asset 5_5: -1194367347409610252
+      Jamie asset 5_6: 7976534146678490875
+      Jamie asset 5_7: 7422776629273479604
+      Jamie asset 5_8: 6029705496535042086
+      Jamie asset 5_9: -79950957599111720
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

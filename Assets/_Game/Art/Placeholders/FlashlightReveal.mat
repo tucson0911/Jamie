@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FlashlightReveal
-  m_Shader: {fileID: 4800000, guid: 9be86f5a5529af746884c9d2e0bd4a56, type: 3}
+  m_Shader: {fileID: 4800000, guid: 15607acd87c7c82b29351ea30a630787, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -41,10 +41,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ConeAngle: 45
+    - _ConeRange: 10
     - _EnableExternalAlpha: 0
+    - _HighlightStrength: 0
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _HighlightColor: {r: 1, g: 0.9, b: 0.65, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
