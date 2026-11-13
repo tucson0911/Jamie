@@ -2,7 +2,6 @@
 #define JAMIE_SEPARATED_LIGHTING_INCLUDED
 
 // Test-only convention: 0 = room lights, 1 = sight mask, 2 = flashlight.
-// The sight mask is deliberately excluded from the displayed illumination.
 float4 _JamieTestSeenLightRange;
 
 half3 JamieTestRoomLight(half2 uv)
