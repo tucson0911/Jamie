@@ -332,6 +332,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4905929818574220547, guid: 2f320afa53871f449b1e686c89a79cd2, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 78.82805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905929818574220547, guid: 2f320afa53871f449b1e686c89a79cd2, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 162.79431
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905929818574220547, guid: 2f320afa53871f449b1e686c89a79cd2, type: 3}
       propertyPath: m_PointLightOuterRadius
       value: 14.24
       objectReference: {fileID: 0}
@@ -434,6 +442,10 @@ PrefabInstance:
     - target: {fileID: 8196801683439451407, guid: 2f320afa53871f449b1e686c89a79cd2, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196801683439451407, guid: 2f320afa53871f449b1e686c89a79cd2, type: 3}
+      propertyPath: m_Intensity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9196791259027614404, guid: 2f320afa53871f449b1e686c89a79cd2, type: 3}
       propertyPath: m_SortingLayer
