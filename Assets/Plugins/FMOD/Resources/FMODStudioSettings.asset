@@ -407,6 +407,9 @@ MonoBehaviour:
   - Master
   Banks:
   - Ambience
+  - ambient_global
+  - Encounters
+  - Monster
   - Music
   - SFX
   BanksToLoad: []
@@ -421,7 +424,7 @@ MonoBehaviour:
   SharedLibraryUpdateStage: 0
   SharedLibraryTimeSinceStart: 0
   CurrentVersion: 131861
-  HideSetupWizard: 0
+  HideSetupWizard: 1
   LastEventReferenceScanVersion: 131861
   Platforms:
   - {fileID: -6159843669444244220}
