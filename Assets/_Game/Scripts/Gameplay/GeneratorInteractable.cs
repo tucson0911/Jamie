@@ -8,6 +8,10 @@ namespace Jamie.Gameplay
     {
         [SerializeField] private PhaseController phases;
         [SerializeField] private MonsterPeekEncounter nurseDoorPeek;
+        
+        [Header("Trigger Settings")]
+        [Tooltip("The trigger zone GameObject to enable once the generator is started.")]
+        [SerializeField] private GameObject triggerZoneToEnable;
 
         [SerializeField]
         private UnityEvent onStarted = new UnityEvent();
@@ -57,6 +61,12 @@ namespace Jamie.Gameplay
             IsPowered = true;
 
             Debug.Log("[Generator] Started.", this);
+
+            // Enable the trigger zone directly via code
+            if (triggerZoneToEnable != null)
+            {
+                triggerZoneToEnable.SetActive(true);
+            }
 
             onStarted.Invoke();
         }
