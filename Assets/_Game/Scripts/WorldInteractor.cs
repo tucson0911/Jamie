@@ -36,6 +36,7 @@ namespace Jamie
             flashlight != null && flashlight.IsOn;
 
         public WorldInteractable CurrentTarget { get; private set; }
+        public LayerMask TargetLayers => targetLayers;
 
         private void Awake()
         {
@@ -96,7 +97,8 @@ namespace Jamie
                     continue;
 
                 Vector2 offset =
-                    target.transform.position - player.transform.position;
+                    target.GetInteractionPoint(player.transform.position) -
+                    (Vector2)player.transform.position;
 
                 if (offset.sqrMagnitude > bestDistance)
                     continue;
@@ -124,7 +126,7 @@ namespace Jamie
             }
         }
 
-        private bool HasClearPath(WorldInteractable target)
+        public bool HasClearPath(WorldInteractable target)
         {
             ContactFilter2D filter = new();
             filter.SetLayerMask(obstacleLayers);
@@ -134,7 +136,7 @@ namespace Jamie
 
             Physics2D.Linecast(
                 player.transform.position,
-                target.transform.position,
+                target.GetInteractionPoint(player.transform.position),
                 filter,
                 hits);
 

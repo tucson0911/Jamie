@@ -98,7 +98,8 @@ Shader "Jamie/Flashlight Reveal 2.0"
                     litResult.rgb = max(0.0h, litResult.rgb - (baseColor.rgb * flashlight));
                 #endif
 
-                litResult.rgb += _HighlightColor.rgb * (_HighlightStrength * visibility);
+                litResult.rgb += baseColor.rgb * _HighlightColor.rgb *
+                    (_HighlightStrength * visibility);
                 litResult.a *= visibility;
             #endif
 
