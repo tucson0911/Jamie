@@ -14,7 +14,7 @@ public class CrawlerAI : MonoBehaviour
 
     [SerializeField] private List<Transform> patrolNodes;
     [SerializeField] private float timeBeforeIdle = 5.0f;
-    [SerializeField] private FMODUnity.StudioEventEmitter walkEmitter;
+    //[SerializeField] private FMODUnity.StudioEventEmitter walkEmitter;
 
     private bool playerInAggroRange = false;
     private bool huntMode = false;
@@ -95,7 +95,7 @@ public class CrawlerAI : MonoBehaviour
         }
 
         // Handle continuous footstep/walk audio based on movement
-        HandleWalkAudio();
+        //HandleWalkAudio();
     }
 
     public void Patrol()
@@ -223,7 +223,7 @@ public class CrawlerAI : MonoBehaviour
         }
     }
 
-    private void HandleWalkAudio()
+    /*private void HandleWalkAudio()
     {
         if (walkEmitter == null || agent == null) return;
 
@@ -244,7 +244,7 @@ public class CrawlerAI : MonoBehaviour
                 walkEmitter.Stop();
             }
         }
-    }
+    }*/
 
     private void OnDrawGizmosSelected()
     {
