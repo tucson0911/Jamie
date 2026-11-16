@@ -407,6 +407,9 @@ MonoBehaviour:
   - Master
   Banks:
   - Ambience
+  - ambient_global
+  - Encounters
+  - Monster
   - Music
   - SFX
   BanksToLoad: []
