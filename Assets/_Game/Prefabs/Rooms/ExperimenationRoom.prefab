@@ -1636,6 +1636,10 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
       propertyPath: m_ShadowMesh.m_LocalBounds.m_Center.x
       value: 0
       objectReference: {fileID: 0}
@@ -1913,13 +1917,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
+    - target: {fileID: 844444804046032082, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6877357165896545166, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.69
       objectReference: {fileID: 0}
     - target: {fileID: 6877357165896545166, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.78
+      value: -7.02
       objectReference: {fileID: 0}
     - target: {fileID: 6877357165896545166, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2301,6 +2309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OfficeChair
       objectReference: {fileID: 0}
+    - target: {fileID: 537967608259480476, guid: 25992fcfa00c3567a9081833c98643bb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3369285523118478615, guid: 25992fcfa00c3567a9081833c98643bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.3624828
@@ -2625,7 +2637,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876870823600008934, guid: c7b69c093ab0a73dc81ae2c21725df72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.83
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 6876870823600008934, guid: c7b69c093ab0a73dc81ae2c21725df72, type: 3}
       propertyPath: m_LocalPosition.y
