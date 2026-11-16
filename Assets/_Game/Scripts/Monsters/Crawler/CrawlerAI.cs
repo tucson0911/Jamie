@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Collections;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.AI; // Required for NavMeshAgent
 

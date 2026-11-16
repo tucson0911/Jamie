@@ -12,6 +12,8 @@ namespace Jamie
         [SerializeField] private bool startWithFlashlight;
 
         public bool HasFlashlight { get; private set; }
+        public bool IsPowerAvailable { get; private set; } = true;
+        private bool inputBlocked;
 
         public bool IsOn =>
             HasFlashlight &&
@@ -41,6 +43,7 @@ namespace Jamie
         {
             if (Time.timeScale <= 0f ||
                 !player.isActiveAndEnabled ||
+                inputBlocked ||
                 !HasFlashlight)
             {
                 return;
@@ -64,7 +67,19 @@ namespace Jamie
         public void SetOn(bool on)
         {
             if (flashlight != null)
-                flashlight.enabled = HasFlashlight && on;
+                flashlight.enabled = HasFlashlight && IsPowerAvailable && on;
+        }
+
+        public void SetPowerAvailable(bool available)
+        {
+            IsPowerAvailable = available;
+            if (!available)
+                SetOn(false);
+        }
+
+        public void SetInputBlocked(bool blocked)
+        {
+            inputBlocked = blocked;
         }
     }
 }

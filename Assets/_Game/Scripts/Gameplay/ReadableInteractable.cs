@@ -13,7 +13,7 @@ namespace Jamie.Gameplay
         private NoteItem note;
 
         public override string Prompt =>
-            $"E - Read {displayName}";
+            $"E - {displayName}";
 
         public override bool RequiresFlashlight =>
             requireFlashlight;
