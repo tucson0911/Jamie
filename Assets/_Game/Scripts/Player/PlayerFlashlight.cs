@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using Jamie.Gameplay;
 
 namespace Jamie
 {
@@ -35,7 +36,13 @@ namespace Jamie
                 return;
             }
 
-            HasFlashlight = startWithFlashlight;
+            GameSession session = GameSession.GetOrCreate();
+
+            HasFlashlight = startWithFlashlight || session.HasFlashlight;
+
+            if (HasFlashlight)
+                session.CollectFlashlight();
+
             SetOn(HasFlashlight);
         }
 
@@ -60,6 +67,8 @@ namespace Jamie
 
         public void Collect()
         {
+            GameSession.GetOrCreate().CollectFlashlight();
+
             HasFlashlight = true;
             SetOn(true);
         }
