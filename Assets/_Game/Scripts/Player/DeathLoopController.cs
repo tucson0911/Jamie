@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Jamie
 {
@@ -15,10 +16,17 @@ namespace Jamie
         [SerializeField, Min(0f)] private float fadeOutSeconds = 0.8f;
         [SerializeField, Min(0f)] private float blackHoldSeconds = 0.35f;
         [SerializeField, Min(0f)] private float fadeInSeconds = 1f;
+        [SerializeField, Min(0f)] private float beforeRespawnHoldSeconds = 0f;
 
         [Header("Reveal After First Death")]
         [SerializeField] private GameObject[] afterFirstDeathItems =
             new GameObject[0];
+
+        [Header("Events")]
+        [SerializeField] private UnityEvent onRespawned = new UnityEvent();
+        [SerializeField] private UnityEvent onTransitionFinished = new UnityEvent();
+        [SerializeField] private UnityEvent onBlackReached = new UnityEvent();
+        [SerializeField] private UnityEvent onFadeInStarting = new UnityEvent();
 
         private bool ready;
         private float timeScaleBeforeDeath = 1f;
@@ -53,9 +61,11 @@ namespace Jamie
             }
         }
 
+        [ContextMenu("Begin Death (Play Mode)")]
         public void BeginDeath()
         {
-            if (!ready || !isActiveAndEnabled ||
+            if (!Application.isPlaying ||
+                !ready || !isActiveAndEnabled ||
                 IsTransitioning || Time.timeScale <= 0f)
                 return;
 
@@ -70,9 +80,17 @@ namespace Jamie
         {
             yield return FadeTo(1f, fadeOutSeconds);
 
+            onBlackReached.Invoke();
+
+            if (beforeRespawnHoldSeconds > 0f)
+            {
+                yield return new WaitForSecondsRealtime(beforeRespawnHoldSeconds);
+}
+
             player.RespawnAt((Vector2)bedSpawn.position);
             cameraFollow.SnapToTarget();
             DeathCount++;
+            onRespawned.Invoke();
 
             if (afterFirstDeathItems != null)
             {
@@ -85,13 +103,14 @@ namespace Jamie
 
             Debug.Log("Respawned at bed. Deaths completed: " + DeathCount, this);
 
-            yield return new WaitForSecondsRealtime(
-                Mathf.Max(0f, blackHoldSeconds));
+            yield return new WaitForSecondsRealtime(Mathf.Max(0f, blackHoldSeconds));
+            onFadeInStarting.Invoke();
             yield return FadeTo(0f, fadeInSeconds);
-
             fadeOverlay.blocksRaycasts = false;
             Time.timeScale = timeScaleBeforeDeath;
             IsTransitioning = false;
+
+            onTransitionFinished.Invoke();
         }
 
         private IEnumerator FadeTo(float targetAlpha, float seconds)
