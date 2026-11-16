@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Jamie.Gameplay
@@ -11,17 +10,14 @@ namespace Jamie.Gameplay
     [DisallowMultipleComponent]
     public sealed class ItemInventory : MonoBehaviour
     {
-        private readonly HashSet<ItemId> items =
-            new HashSet<ItemId>();
-
         public bool Has(ItemId item)
         {
-            return items.Contains(item);
+            return GameSession.GetOrCreate().HasItem(item);
         }
 
         public void Add(ItemId item)
         {
-            if (items.Add(item))
+            if (GameSession.GetOrCreate().AddItem(item))
             {
                 Debug.Log(
                     $"[Inventory] Collected {item}", this);
