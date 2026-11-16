@@ -1006,8 +1006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  noteTitle: A Dusty Note
-  noteBody: 
+  noteTitle: Patient Log
+  noteBody: 'The Patient number #207 showed signs of hysteria once being injected
+    by *blurry*. Seek antidote immediatelly. '
   noteImage: {fileID: 2679450770238305592, guid: d81f11a920ffbb13bb299ff0cbec18c8, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1741,7 +1742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9998764
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2096,8 +2097,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2085772438912841645, guid: 6eab44c73df5df9cba726c0d3b6eab19, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7751652372126050049}
   m_SourcePrefab: {fileID: 100100000, guid: 6eab44c73df5df9cba726c0d3b6eab19, type: 3}
+--- !u!1 &4188130812527813380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2085772438912841645, guid: 6eab44c73df5df9cba726c0d3b6eab19, type: 3}
+  m_PrefabInstance: {fileID: 2804929151480730793}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7751652372126050049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188130812527813380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  noteTitle: Plea for Shut Down
+  noteBody: Looks like paper from Health Control Embassy. Seems that they wanted
+    to shut this place down because of the "unorthodox experiments" this hospital
+    practised.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &5042776777823377312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7140060222246470409, guid: 6eab44c73df5df9cba726c0d3b6eab19, type: 3}
@@ -2315,7 +2346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3369285523118478615, guid: 25992fcfa00c3567a9081833c98643bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.3624828
+      value: 3.44
       objectReference: {fileID: 0}
     - target: {fileID: 3369285523118478615, guid: 25992fcfa00c3567a9081833c98643bb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2542,13 +2573,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3014822253733950045, guid: e684cacf447d001fcbb27715d8782ad5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5220422791279918386}
   m_SourcePrefab: {fileID: 100100000, guid: e684cacf447d001fcbb27715d8782ad5, type: 3}
 --- !u!4 &7737840249346932867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3920406294861639960, guid: e684cacf447d001fcbb27715d8782ad5, type: 3}
   m_PrefabInstance: {fileID: 6704241865398792603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8420760062592844742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3014822253733950045, guid: e684cacf447d001fcbb27715d8782ad5, type: 3}
+  m_PrefabInstance: {fileID: 6704241865398792603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5220422791279918386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8420760062592844742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  noteTitle: Syringes on Table
+  noteBody: These are some old rusty syringes that were probably used on these patients.
+    They look awfully long and painful. How is this even legal?
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7980410302709521028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2563,15 +2623,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4893995038630693778, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.5809
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4893995038630693778, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.5809
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4893995038630693778, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.5809
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4893995038630693778, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2612,6 +2672,10 @@ PrefabInstance:
     - target: {fileID: 4893995038630693778, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893995038630693778, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
