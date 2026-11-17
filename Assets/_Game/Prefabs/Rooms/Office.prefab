@@ -1444,7 +1444,7 @@ MonoBehaviour:
   noteTitle: Pills on the floor
   noteBody: "Pill Description: Plerifoxin Roxabicin\n\nUsed for calming down the
     hallucinations and is used as a relaxant after a traumatic operation. \n\nPossible
-    Side Effects: Prolonged and extremly deep sleep and dissociation."
+    Side Effects: Prolonged and extremely deep sleep and dissociation."
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1681,7 +1681,9 @@ MonoBehaviour:
   noteBody: 'This is the doctor''s name card.
 
 
-    Clark  '
+    Clark. My dad always used to
+    be proud of his surname. He was happy he had a son who will be able to carry
+    his heritage. '
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
