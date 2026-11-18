@@ -9,7 +9,6 @@ Shader "Jamie/Tests/Separated Objects"
         _HighlightColor("Highlight Color", Color) = (1, 0.9, 0.65, 1)
         _HighlightStrength("Highlight Strength", Range(0, 1)) = 0
 
-        // Legacy properties. They're here so that materials using this shader can gracefully fallback to the legacy sprite shader.
         [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
         [HideInInspector] _RendererColor("RendererColor", Color) = (1,1,1,1)
         [HideInInspector] _AlphaTex("External Alpha", 2D) = "white" {}
@@ -36,7 +35,6 @@ Shader "Jamie/Tests/Separated Objects"
 
             #include_with_pragmas "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/ShapeLightShared.hlsl"
 
-            // GPU Instancing
             #pragma multi_compile_instancing
             #pragma multi_compile _ DEBUG_DISPLAY
             #pragma multi_compile _ SKINNED_SPRITE
@@ -57,7 +55,6 @@ Shader "Jamie/Tests/Separated Objects"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Lit2DCommon.hlsl"
             #include "SeparatedLighting.hlsl"
 
-            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
                 half4 _HighlightColor;
@@ -111,7 +108,6 @@ Shader "Jamie/Tests/Separated Objects"
             #pragma vertex NormalsRenderingVertex
             #pragma fragment NormalsRenderingFragment
 
-            // GPU Instancing
             #pragma multi_compile_instancing
             #pragma multi_compile _ SKINNED_SPRITE
 
@@ -130,7 +126,6 @@ Shader "Jamie/Tests/Separated Objects"
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Normals2DCommon.hlsl"
 
-            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START( UnityPerMaterial )
                 half4 _Color;
                 half4 _HighlightColor;
@@ -181,11 +176,9 @@ Shader "Jamie/Tests/Separated Objects"
 
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/2DCommon.hlsl"
           
-            // GPU Instancing
             #pragma multi_compile_instancing
             #pragma multi_compile _ DEBUG_DISPLAY SKINNED_SPRITE
 
-            // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
                 half4 _HighlightColor;

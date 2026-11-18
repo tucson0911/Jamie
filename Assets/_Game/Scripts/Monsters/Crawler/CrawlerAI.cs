@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Collections;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.AI; // Required for NavMeshAgent
 
@@ -15,9 +14,11 @@ public class CrawlerAI : MonoBehaviour
 
     [SerializeField] private List<Transform> patrolNodes;
     [SerializeField] private float timeBeforeIdle = 5.0f;
+    //[SerializeField] private FMODUnity.StudioEventEmitter walkEmitter;
 
     private bool playerInAggroRange = false;
     private bool huntMode = false;
+    private bool playerHuntingEnabled = true;
     private Transform currentDestination = null;
     private bool isWaiting = false;
     private float timeOutsideWalkableZone = 0f;
@@ -33,24 +34,58 @@ public class CrawlerAI : MonoBehaviour
         }
     }
 
+    public void SetPlayerHuntingEnabled(bool value)
+    {
+        playerHuntingEnabled = value;
+
+        StopAllCoroutines();
+
+        huntMode = false;
+        playerInAggroRange = false;
+        currentDestination = null;
+        isWaiting = false;
+        timeOutsideWalkableZone = 0f;
+
+        if (agent != null &&
+            agent.isActiveAndEnabled &&
+            agent.isOnNavMesh)
+        {
+            agent.ResetPath();
+            agent.isStopped = false;
+        }
+    }
+
     void Update()
     {
-        bool playerDetected = visionSensor != null && visionSensor.IsPlayerDetected;
-        Transform targetPlayer = visionSensor != null ? visionSensor.DetectedPlayer : null;
+        if (Time.timeScale <= 0f || agent == null || !agent.isActiveAndEnabled || !agent.isOnNavMesh)
+    {
+        return;
+    }
+
+        bool playerDetected =
+            playerHuntingEnabled &&
+            visionSensor != null &&
+            visionSensor.IsPlayerDetected;
+
+        Transform targetPlayer =
+            visionSensor != null
+                ? visionSensor.DetectedPlayer
+                : null;
 
         if (playerDetected && targetPlayer != null)
         {
             if (!huntMode)
             {
                 StopAllCoroutines();
+
                 isWaiting = false;
                 currentDestination = null;
                 huntMode = true;
-                timeOutsideWalkableZone = 0f; // Reset timer on new detection
+                timeOutsideWalkableZone = 0f;
             }
         }
 
-        if (huntMode && targetPlayer != null)
+        if (playerHuntingEnabled && huntMode && targetPlayer != null)
         {
             HuntPlayer(targetPlayer);
         }
@@ -58,6 +93,9 @@ public class CrawlerAI : MonoBehaviour
         {
             Patrol();
         }
+
+        // Handle continuous footstep/walk audio based on movement
+        //HandleWalkAudio();
     }
 
     public void Patrol()
@@ -67,6 +105,13 @@ public class CrawlerAI : MonoBehaviour
         if (currentDestination == null)
         {
             currentDestination = PickRandomNode();
+
+            if (currentDestination == null)
+            {
+                agent.isStopped = true;
+                return;
+            }
+
             agent.isStopped = false;
             agent.SetDestination(currentDestination.position);
         }
@@ -109,7 +154,13 @@ public class CrawlerAI : MonoBehaviour
     public void HuntPlayer(Transform targetPlayer)
     {
         // Check if player is physically off the NavMesh or if the path is entirely invalid
-        bool isPlayerOffMesh = !NavMesh.SamplePosition(targetPlayer.position, out _, 1.0f, NavMesh.AllAreas);
+        NavMeshQueryFilter filter = new NavMeshQueryFilter
+        {
+            agentTypeID = agent.agentTypeID,
+            areaMask = agent.areaMask
+        };
+
+        bool isPlayerOffMesh = !NavMesh.SamplePosition(targetPlayer.position, out _, 1f, filter);
         bool isPathInvalid = agent.pathStatus == NavMeshPathStatus.PathInvalid;
 
         if (isPlayerOffMesh || isPathInvalid || !PlayerInAggro(targetPlayer))
@@ -171,6 +222,29 @@ public class CrawlerAI : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
+
+    /*private void HandleWalkAudio()
+    {
+        if (walkEmitter == null || agent == null) return;
+
+        // Check if the agent is actively moving (not stopped and has physical velocity)
+        bool isMoving = !agent.isStopped && agent.velocity.sqrMagnitude > 0.01f;
+
+        if (isMoving)
+        {
+            if (!walkEmitter.IsPlaying())
+            {
+                walkEmitter.Play();
+            }
+        }
+        else
+        {
+            if (walkEmitter.IsPlaying())
+            {
+                walkEmitter.Stop();
+            }
+        }
+    }*/
 
     private void OnDrawGizmosSelected()
     {

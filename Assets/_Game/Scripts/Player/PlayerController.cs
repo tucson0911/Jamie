@@ -14,6 +14,7 @@ namespace Jamie
         [SerializeField] private Transform facing;
         [SerializeField] private Light2D visionCone;
         [SerializeField] private Light2D flashlight;
+        [SerializeField] private bool useLegacyFlashlightInput = true;
 
         private Rigidbody2D body;
         private Vector2 movement;
@@ -58,8 +59,12 @@ namespace Jamie
                 movement = Vector2.ClampMagnitude(movement, 1f);
                 sprinting = keyboard.leftShiftKey.isPressed || keyboard.rightShiftKey.isPressed;
 
-                if (keyboard.fKey.wasPressedThisFrame && visionCone != null)
+                if (useLegacyFlashlightInput &&
+                    keyboard.fKey.wasPressedThisFrame &&
+                    visionCone != null)
+                {
                     visionCone.enabled = !flashlight.enabled;
+                }
                 if (keyboard.rKey.wasPressedThisFrame)
                     ResetToSpawn();
             }
