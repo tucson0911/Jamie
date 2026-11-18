@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
+using Jamie.Gameplay;
 
 namespace Jamie
 {
@@ -12,6 +13,8 @@ namespace Jamie
         [SerializeField] private bool startWithFlashlight;
 
         public bool HasFlashlight { get; private set; }
+        public bool IsPowerAvailable { get; private set; } = true;
+        private bool inputBlocked;
 
         public bool IsOn =>
             HasFlashlight &&
@@ -33,7 +36,13 @@ namespace Jamie
                 return;
             }
 
-            HasFlashlight = startWithFlashlight;
+            GameSession session = GameSession.GetOrCreate();
+
+            HasFlashlight = startWithFlashlight || session.HasFlashlight;
+
+            if (HasFlashlight)
+                session.CollectFlashlight();
+
             SetOn(HasFlashlight);
         }
 
@@ -41,6 +50,7 @@ namespace Jamie
         {
             if (Time.timeScale <= 0f ||
                 !player.isActiveAndEnabled ||
+                inputBlocked ||
                 !HasFlashlight)
             {
                 return;
@@ -57,6 +67,8 @@ namespace Jamie
 
         public void Collect()
         {
+            GameSession.GetOrCreate().CollectFlashlight();
+
             HasFlashlight = true;
             SetOn(true);
         }
@@ -64,7 +76,19 @@ namespace Jamie
         public void SetOn(bool on)
         {
             if (flashlight != null)
-                flashlight.enabled = HasFlashlight && on;
+                flashlight.enabled = HasFlashlight && IsPowerAvailable && on;
+        }
+
+        public void SetPowerAvailable(bool available)
+        {
+            IsPowerAvailable = available;
+            if (!available)
+                SetOn(false);
+        }
+
+        public void SetInputBlocked(bool blocked)
+        {
+            inputBlocked = blocked;
         }
     }
 }
