@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Phase_2.unity
     guid: 3a1903b12ccaae54791df3c7b1bc8a2f
+  - enabled: 1
+    path: Assets/Scenes/Dream_phase.unity
+    guid: a2327217907cce043b0e729b33496319
+  - enabled: 1
+    path: Assets/Scenes/Phase_3.unity
+    guid: 4c612ca0cdd23cb449c52071235ee963
   - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 549c300024d9fa3e3b6b9d33e883e1ed
