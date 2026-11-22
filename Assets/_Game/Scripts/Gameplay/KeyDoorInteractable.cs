@@ -20,6 +20,8 @@ namespace Jamie.Gameplay
 
         public override bool RequiresFlashlight =>
             requireFlashlight;
+        public override bool HighlightWithoutFlashlight =>
+            !RequiresFlashlight;    
 
         public override string Prompt
         {

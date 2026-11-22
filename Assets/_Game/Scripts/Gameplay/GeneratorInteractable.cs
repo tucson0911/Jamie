@@ -24,6 +24,8 @@ namespace Jamie.Gameplay
 
         public override bool RequiresFlashlight => false;
 
+        public override bool HighlightWithoutFlashlight => true;
+
         private void Awake()
         {
             if (phases == null)

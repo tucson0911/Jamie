@@ -7,6 +7,8 @@ Shader "Jamie/Main/Wall Visibility"
         _NormalMap("Normal Map", 2D) = "bump" {}
         [MaterialToggle] _ZWrite("ZWrite", Float) = 0
         [ToggleUI] _JamieIsWall("Wall Surface", Float) = 0
+        _HighlightColor("Highlight Color", Color) = (1, 0.9, 0.65, 1)
+        _HighlightStrength("Highlight Strength", Range(0, 1)) = 0
 
         // Legacy properties. For fallback usage.
         [HideInInspector] _Color("Tint", Color) = (1,1,1,1)
@@ -61,7 +63,9 @@ Shader "Jamie/Main/Wall Visibility"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                half4 _HighlightColor;
                 float _JamieIsWall;
+                float _HighlightStrength;
             CBUFFER_END
 
             TEXTURE2D(_JamieExploredTexture);
@@ -267,7 +271,8 @@ Shader "Jamie/Main/Wall Visibility"
                             sprite.a);
                     }
                 }
-
+                colour += sprite.rgb * _HighlightColor.rgb *
+                (_HighlightStrength * sight * liveVisibility * alpha);    
                 return half4(colour, alpha);
             }
             ENDHLSL
@@ -303,9 +308,11 @@ Shader "Jamie/Main/Wall Visibility"
             #include "Packages/com.unity.render-pipelines.universal/Shaders/2D/Include/Normals2DCommon.hlsl"
 
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
-            CBUFFER_START( UnityPerMaterial )
+            CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                half4 _HighlightColor;
                 float _JamieIsWall;
+                float _HighlightStrength;
             CBUFFER_END
 
             Varyings NormalsRenderingVertex(Attributes input)
@@ -359,7 +366,9 @@ Shader "Jamie/Main/Wall Visibility"
             // NOTE: Do not ifdef the properties here as SRP batcher can not handle different layouts.
             CBUFFER_START(UnityPerMaterial)
                 half4 _Color;
+                half4 _HighlightColor;
                 float _JamieIsWall;
+                float _HighlightStrength;
             CBUFFER_END
 
             Varyings UnlitVertex(Attributes input)

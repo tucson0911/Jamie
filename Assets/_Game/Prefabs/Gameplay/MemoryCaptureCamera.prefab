@@ -69,13 +69,13 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 16
+  orthographic size: 80
   m_Depth: -10
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 9096b684002b1884bb0638882af78ba7, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: cf643e28aee285449ab934370de6785a, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
@@ -143,8 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Jamie.VisibilityMemory
   accumulationMaterial: {fileID: 2100000, guid: 0b6a6425daec76a488b603b6340a815d, type: 2}
   mode: 2
-  memoryHoldTime: 2
-  memoryFadeTime: 3
+  memoryHoldTime: 1
+  memoryFadeTime: 2
   memoryEdgeSoftness: 3
   wallMemoryBrightness: 0.01
   wallMemoryWidth: 1.5
