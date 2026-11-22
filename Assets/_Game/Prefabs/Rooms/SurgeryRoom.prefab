@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631441858299182189}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.24776004, w: 0.96882147}
-  m_LocalPosition: {x: 3.57, y: 6.09, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.24776004, w: 0.96882147}
+  m_LocalPosition: {x: 1.349487, y: -0.4498289, z: 0}
+  m_LocalScale: {x: 0.6078771, y: 0.6078771, z: 0.6078771}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917113126998085996}
+  m_Father: {fileID: 2614309059816072577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -28.69}
 --- !u!212 &4524537784395427780
 SpriteRenderer:
@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 754b364ba280c42478dacae37c398f6d, type: 2}
   noteTitle: Jamie's Letter
   noteBody: "Dear Alfie,\n\nI wish you the happiest birthday! \n\nMy travel partner
     and the closest friend I ever had. You have been here for the good and bad times
@@ -816,8 +817,6 @@ Transform:
   - {fileID: 2614309059816072577}
   - {fileID: 1807015973809894553}
   - {fileID: 1515673520730984257}
-  - {fileID: 7561714698155348770}
-  - {fileID: 5023238568688183505}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5089533502790920795
@@ -1038,12 +1037,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5244765788619500486}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.27672777, w: 0.96094835}
-  m_LocalPosition: {x: 1.04, y: -2.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.27672777, w: 0.96094835}
+  m_LocalPosition: {x: 0.5117137, y: -0.99531126, z: 0}
+  m_LocalScale: {x: 0.56232274, y: 0.56232274, z: 0.56232274}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5917113126998085996}
+  m_Father: {fileID: 8268459421194088518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -32.13}
 --- !u!212 &5592081686354974084
 SpriteRenderer:
@@ -1116,6 +1115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 9d2f954721c8e46479ab8b24db98fe7c, type: 2}
   noteTitle: Jamie's Phone?
   noteBody: '50 missed calls from Dad
 
@@ -2101,7 +2101,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7089660428984782905, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5023238568688183505}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
       insertIndex: -1
@@ -2417,7 +2420,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2373707181537182728, guid: feab6ddda4ad2bea19f87746f83da2b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7561714698155348770}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feab6ddda4ad2bea19f87746f83da2b2, type: 3}
 --- !u!4 &8268459421194088518 stripped

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0ce2298f403d6408d5592d0c40c43c, type: 3}
+  m_Name: Journal_PatientLog
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.JournalEntry
+  title: Patient Log
+  body: The Patient number #207 showed signs of hysteria once being injected by *blurry*.
+    Seek antidote immediatelly.
+  image: {fileID: 2679450770238305592, guid: d81f11a920ffbb13bb299ff0cbec18c8, type: 3}
+  category: 0
+  sortOrder: 20

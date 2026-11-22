@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Drawer
   noteBody: "This drawer is full of masks. \n\nFinally something hygienic in this
     hospital."
@@ -678,6 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Health Drink
   noteBody: 'A green drink is lying on the floor.
 
@@ -1756,6 +1758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Nurse's Uniform
   noteBody: 'Nurse''s Uniform packed in a see-through bag.
 
@@ -1877,6 +1880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Jamie's hospital history
   noteBody: "Oh look, it's Jamie's log! \n\nThis isn't good at all. \n\nHis previous
     records show that he visited several hospitals before this. Looks like this was
@@ -2526,6 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Note on a Laptop
   noteBody: 'There''s a yellow note sticked to the laptop screen.
 
@@ -2992,6 +2997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 74e5e44b9b273e845b4d286f8c766290, type: 2}
   noteTitle: Plane Tickets
   noteBody: "Machu Picchu (tickets expired 5th May 2025)\n\r\nJamie and I were supposed
     to travel together. We never managed to because of his illness. \n\nHe became

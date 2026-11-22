@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Jamie.Gameplay;
 
 public class NoteManager : MonoBehaviour
 {
@@ -57,24 +58,29 @@ public class NoteManager : MonoBehaviour
         timeScaleBeforeReading = Time.timeScale;
 
         if (titleTextField != null)
-            titleTextField.text = note.noteTitle;
+            titleTextField.text = note.ContentTitle;
 
         if (bodyTextField != null)
-            bodyTextField.text = note.noteBody;
+            bodyTextField.text = note.ContentBody;
 
         if (noteUIImage != null)
         {
-            noteUIImage.gameObject.SetActive(note.noteImage != null);
+            Sprite image = note.ContentImage;
 
-            if (note.noteImage != null)
+            noteUIImage.gameObject.SetActive(image != null);
+
+            if (image != null)
             {
-                noteUIImage.sprite = note.noteImage;
+                noteUIImage.sprite = image;
 
                 Vector2 size = noteUIImage.rectTransform.sizeDelta;
+
                 if (note.noteImageWidth > 0f)
                     size.x = note.noteImageWidth;
+
                 if (note.noteImageHeight > 0f)
                     size.y = note.noteImageHeight;
+
                 noteUIImage.rectTransform.sizeDelta = size;
             }
         }
@@ -98,7 +104,12 @@ public class NoteManager : MonoBehaviour
         Time.timeScale = timeScaleBeforeReading;
 
         if (finishedNote != null)
+        {
+            GameSession.GetOrCreate()
+                .AddJournalEntry(finishedNote.journalEntry);
+
             finishedNote.onFinishedReading?.Invoke();
+        }
     }
 
     private void OnDestroy()

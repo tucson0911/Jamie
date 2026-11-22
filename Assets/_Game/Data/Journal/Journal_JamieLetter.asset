@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0ce2298f403d6408d5592d0c40c43c, type: 3}
+  m_Name: Journal_JamieLetter
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.JournalEntry
+  title: Jamie's Letter
+  body: "Dear Alfie,\n\nI wish you the happiest birthday! \n\nMy travel partner and
+    the closest friend I ever had. You have been here for the good and bad times
+    and I hope these bad ones will be over soon. I miss our travels and I hope we
+    can go to that Machu Picchu trip soon! \n\nAnyways remember to stay true to yourself
+    and your dreams! Life\u2019s too short not to pursue your dreams!! \n\nAll the
+    best, Jamie"
+  image: {fileID: 0}
+  category: 0
+  sortOrder: 20
