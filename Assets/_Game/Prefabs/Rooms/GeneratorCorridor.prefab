@@ -129,7 +129,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76972a22cb795424585d2aa40539b096, type: 2}
+  - {fileID: 2100000, guid: 757ee886541736b47b4c02d51bc5787e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -341,7 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6264276419102472285}
   - component: {fileID: 3632104272194301808}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d8d6a467938cbbb4ba038be113c02b92, type: 2}
+  - {fileID: 2100000, guid: 8f3ed2e127cbb6d4c9ff7c26e4832f56, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -575,7 +575,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 76972a22cb795424585d2aa40539b096, type: 2}
+  - {fileID: 2100000, guid: 757ee886541736b47b4c02d51bc5787e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
