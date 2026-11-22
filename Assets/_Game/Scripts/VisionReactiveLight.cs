@@ -23,7 +23,7 @@ namespace Jamie
 
         [SerializeField] private bool powered = true;
 
-        private float[] normalIntensities;
+        private Color[] normalColors;
         private float visibility;
         private float visibleUntil = float.NegativeInfinity;
 
@@ -60,11 +60,10 @@ namespace Jamie
                 }
             }
 
-            normalIntensities =
-                new float[controlledLights.Length];
+            normalColors = new Color[controlledLights.Length];
 
             for (int i = 0; i < controlledLights.Length; i++)
-                normalIntensities[i] = controlledLights[i].intensity;
+                normalColors[i] = controlledLights[i].color;
 
             ApplyBrightness(0f);
         }
@@ -137,13 +136,23 @@ namespace Jamie
 
         private void ApplyBrightness(float amount)
         {
+            if (normalColors == null)
+                return;
+
             for (int i = 0; i < controlledLights.Length; i++)
             {
-                if (controlledLights[i] != null)
-                {
-                    controlledLights[i].intensity =
-                        normalIntensities[i] * amount;
-                }
+                Light2D light = controlledLights[i];
+
+                if (light == null)
+                    continue;
+
+                Color original = normalColors[i];
+
+                light.color = new Color(
+                    original.r * amount,
+                    original.g * amount,
+                    original.b * amount,
+                    original.a);
             }
         }
 
@@ -154,8 +163,7 @@ namespace Jamie
 
         private void OnDisable()
         {
-            if (normalIntensities != null)
-                ApplyBrightness(1f);
+            ApplyBrightness(1f);
         }
     }
 }

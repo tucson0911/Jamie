@@ -16,6 +16,17 @@ namespace Jamie.Gameplay
         [SerializeField, Range(0f, 1f)] private float remainingLight = 0.04f;
         [SerializeField, Min(0.1f)] private float restoreSeconds = 0.7f;
 
+        [Header("Emergency Flicker")]
+        [SerializeField]
+        private Vector2 emergencyOnSeconds = new Vector2(0.1f, 0.25f);
+
+        [SerializeField]
+        private Vector2 emergencyOffSeconds = new Vector2(0.2f, 0.6f);
+
+        private float emergencyLevel;
+        private float nextEmergencyFlickerTime;
+        private bool emergencyPulseOn = true;
+
         private float[] normalIntensities;
         private float[] emergencyIntensities;
         private Coroutine transition;
@@ -148,6 +159,53 @@ namespace Jamie.Gameplay
         }
 
         private void SetEmergency(float amount)
+        {
+            amount = Mathf.Clamp01(amount);
+
+            if (emergencyLevel <= 0f && amount > 0f)
+            {
+                emergencyPulseOn = true;
+                ScheduleEmergencyFlicker();
+            }
+
+            emergencyLevel = amount;
+
+            ApplyEmergency(
+                emergencyLevel * (emergencyPulseOn ? 1f : 0f));
+        }
+
+        private void LateUpdate()
+        {
+            if (!ready || Time.timeScale <= 0f || emergencyLevel <= 0f)
+                return;
+
+            if (Time.time >= nextEmergencyFlickerTime)
+            {
+                emergencyPulseOn = !emergencyPulseOn;
+                ScheduleEmergencyFlicker();
+            }
+
+            ApplyEmergency(
+                emergencyLevel * (emergencyPulseOn ? 1f : 0f));
+        }
+
+        private void ScheduleEmergencyFlicker()
+        {
+            Vector2 range = emergencyPulseOn
+                ? emergencyOnSeconds
+                : emergencyOffSeconds;
+
+            float minimum = Mathf.Max(
+                0.02f, Mathf.Min(range.x, range.y));
+
+            float maximum = Mathf.Max(
+                minimum, Mathf.Max(range.x, range.y));
+
+            nextEmergencyFlickerTime =
+                Time.time + Random.Range(minimum, maximum);
+        }
+
+        private void ApplyEmergency(float amount)
         {
             for (int i = 0; i < emergencyLights.Length; i++)
                 if (emergencyLights[i] != null)
