@@ -1232,7 +1232,7 @@ MonoBehaviour:
   noteBody: The famous victorain hospital sold to one of the most prestigious doctors
     of this decade, Dr Smith. Although his background is mysterious, his cancer research
     is outstanding.
-  noteImage: {fileID: 0}
+  noteImage: {fileID: 2391255840840876710, guid: db86c26d9f58fbb40b111a773aa86b11, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
   onFinishedReading:
@@ -3849,7 +3849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2789112352403861065, guid: 9d4f00854ba0f572789413d325d0768f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.049431562
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 2789112352403861065, guid: 9d4f00854ba0f572789413d325d0768f, type: 3}
       propertyPath: m_LocalPosition.z
