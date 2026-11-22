@@ -10,6 +10,17 @@ namespace Jamie.Gameplay
     [DisallowMultipleComponent]
     public sealed class ItemInventory : MonoBehaviour
     {
+        [SerializeField]
+        private JournalEntry receptionKeyJournalEntry;
+
+        private void Start()
+        {
+            GameSession session = GameSession.GetOrCreate();
+
+            if (session.HasItem(ItemId.ReceptionKey))
+                session.AddJournalEntry(receptionKeyJournalEntry);
+        }
+
         public bool Has(ItemId item)
         {
             return GameSession.GetOrCreate().HasItem(item);
@@ -17,11 +28,16 @@ namespace Jamie.Gameplay
 
         public void Add(ItemId item)
         {
-            if (GameSession.GetOrCreate().AddItem(item))
+            GameSession session = GameSession.GetOrCreate();
+
+            if (session.AddItem(item))
             {
                 Debug.Log(
                     $"[Inventory] Collected {item}", this);
             }
+
+            if (item == ItemId.ReceptionKey)
+                session.AddJournalEntry(receptionKeyJournalEntry);
         }
     }
 }

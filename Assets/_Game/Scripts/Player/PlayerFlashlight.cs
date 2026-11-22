@@ -11,6 +11,8 @@ namespace Jamie
         [SerializeField] private PlayerController player;
         [SerializeField] private Light2D flashlight;
         [SerializeField] private bool startWithFlashlight;
+        [Header("Journal")]
+        [SerializeField] private JournalEntry flashlightJournalEntry;
 
         public bool HasFlashlight { get; private set; }
         public bool IsPowerAvailable { get; private set; } = true;
@@ -41,7 +43,10 @@ namespace Jamie
             HasFlashlight = startWithFlashlight || session.HasFlashlight;
 
             if (HasFlashlight)
+            {
                 session.CollectFlashlight();
+                session.AddJournalEntry(flashlightJournalEntry);
+            }
 
             SetOn(HasFlashlight);
         }
@@ -67,10 +72,14 @@ namespace Jamie
 
         public void Collect()
         {
-            GameSession.GetOrCreate().CollectFlashlight();
+            GameSession session = GameSession.GetOrCreate();
+
+            session.CollectFlashlight();
 
             HasFlashlight = true;
             SetOn(true);
+
+            session.AddJournalEntry(flashlightJournalEntry);
         }
 
         public void SetOn(bool on)

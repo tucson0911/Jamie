@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Jamie.Gameplay
 {
@@ -9,6 +10,12 @@ namespace Jamie.Gameplay
         private static GameSession instance;
 
         private readonly HashSet<ItemId> items = new();
+
+        private readonly List<JournalEntry> journalEntries = new();
+
+        public IReadOnlyList<JournalEntry> JournalEntries => journalEntries;
+
+        public event Action JournalChanged;
 
         public bool HasFlashlight { get; private set; }
 
@@ -39,6 +46,30 @@ namespace Jamie.Gameplay
         {
             if (instance == this)
                 instance = null;
+        }
+
+        public bool AddJournalEntry(JournalEntry entry)
+        {
+            if (entry == null || journalEntries.Contains(entry))
+                return false;
+
+            journalEntries.Add(entry);
+
+            journalEntries.Sort((a, b) =>
+            {
+                int order = a.SortOrder.CompareTo(b.SortOrder);
+
+                return order != 0
+                    ? order
+                    : string.Compare(
+                        a.Title, b.Title,
+                        StringComparison.OrdinalIgnoreCase);
+            });
+
+            Debug.Log($"[Journal] Collected: {entry.Title}", this);
+
+            JournalChanged?.Invoke();
+            return true;
         }
 
         public bool HasItem(ItemId item)
