@@ -14,6 +14,7 @@ public class SkullWanderer : MonoBehaviour
     [Header("Aggro / Tracking Settings")]
     [SerializeField] private float maxReachDistance = 2.2f; 
     [SerializeField] private float trackSpeed = 8.0f;    
+    [SerializeField] private bool enableFollowPlayer = true;
 
     private float seedX;
     private float seedY;
@@ -36,7 +37,7 @@ public class SkullWanderer : MonoBehaviour
 
         Vector3 targetPosition;
 
-        if (playerDetected && targetPlayer != null)
+        if (playerDetected && targetPlayer != null && enableFollowPlayer)
         {
             // AGGRO STATE: Reach toward player position
             Vector3 directionToPlayer = targetPlayer.position - neutralAnchor.position;
