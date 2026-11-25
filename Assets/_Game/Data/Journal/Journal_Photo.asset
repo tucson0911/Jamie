@@ -16,6 +16,6 @@ MonoBehaviour:
   body: "Two friends in a photograph. They look like they\u2019re on a hiking trip.
     \r\n\r\nOn the back of the photograph there\u2019s a note. \r\n\r\nAlfie and
     Jamie 2023, Himalayas\r\n"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 449dc265738a4024d9a8cbd10c6f1aee, type: 3}
   category: 0
   sortOrder: 20
