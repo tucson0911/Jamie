@@ -1228,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Newspaper
   noteBody: The famous victorain hospital sold to one of the most prestigious doctors
     of this decade, Dr Smith. Although his background is mysterious, his cancer research
@@ -4004,6 +4005,10 @@ PrefabInstance:
       value: TEDDYYYYYY
       objectReference: {fileID: 0}
     - target: {fileID: 8419760993247292804, guid: 9d4f00854ba0f572789413d325d0768f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419760993247292804, guid: 9d4f00854ba0f572789413d325d0768f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
@@ -4032,6 +4037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Teddy Bear
   noteBody: "Get well soon! I can't wait for you to be home again! \nLove, Elle "
   noteImage: {fileID: 0}
@@ -4249,6 +4255,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7126539447744549322}
+    - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8763730297657036478}
+    - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7430518918926203592}
   m_SourcePrefab: {fileID: 100100000, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
 --- !u!4 &1618212145876010433 stripped
 Transform:
@@ -4398,3 +4410,46 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.684, y: 0.5376}
   m_EdgeRadius: 0
+--- !u!114 &8763730297657036478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839953580801779089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Receptionist's Desk
+  noteBody: 'This desk is filled with papers.
+
+
+    Last patient is logged May 2025.
+
+
+    Patient
+    #207 *name blurred* is currently residing in room 502. '
+  noteImage: {fileID: -9076402110922831160, guid: d9b93caf6790792468d1c40706adde12, type: 3}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7430518918926203592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839953580801779089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Receptionist's Desk
+  requireFlashlight: 1
+  collectAfterReading: 0

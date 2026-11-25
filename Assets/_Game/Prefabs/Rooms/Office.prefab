@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Doctor's Certificate
   noteBody: "I was never proud of doing this. I was forced by my dad. \n\nHe wanted
     me to be just like him."
@@ -355,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Key Room 502
   noteBody: 'Oh wait, the key for the locked room? '
   noteImage: {fileID: 0}
@@ -1578,13 +1580,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Patient's Files
-  noteBody: "You open the sealed file and read the patient's name. \n\nJamie Hill\nAged
-    32\nDiagnose: Lymphoma\nStage 3\n\nDays spent in St Mary Hospital: 72\n\nNumber
-    of Experiments executed: 5\n\nSuccessful treatments: 0\n\nCurrent State: Heavy
-    breathing, difficulty walking, appearance significantly altered, having hallucinations
-    due to the heavy medication, appetite increased \n\nNext Test: Hemostatil Dosage
-    (50 ml) "
+  noteBody: "Jamie Hill\nAged 32\nDiagnose: Lymphoma\nStage 3\n\nDays spent in St
+    Mary Hospital: 72\n\nNumber of Experiments executed: 5\n\nSuccessful treatments:
+    0\n\nCurrent State: Heavy breathing, difficulty walking, appearance significantly
+    altered, having hallucinations due to the heavy medication, appetite increased
+    \n\nNext Test: Hemostatil Dosage (50 ml)"
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1695,6 +1697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Pills on the floor
   noteBody: "Pill Description: Plerifoxin Roxabicin\n\nUsed for calming down the
     hallucinations and is used as a relaxant after a traumatic operation. \n\nPossible
@@ -1978,6 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Name Card
   noteBody: 'This is the doctor''s name card.
 
@@ -2149,10 +2153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Family Portrait
-  noteBody: 'I remember the person in this photograph. That''s my dad in his doctor''s
-    suit. Taking this photograph was one of the rare moments he would spend with
-    me. '
+  noteBody: "I remember getting this photograph taken.\n\nI was only 3 years old.\n\nThat's
+    my dad in his doctor's suit. \n\nTaking this photograph was one of the rare moments
+    he would spend with me. "
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2762,6 +2767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: A Rusty Gas Mask
   noteBody: "The gas mask looks like it has been worn before. There must be a reason
     why there's a mask in a hospital like this. Is it for the gas experiments so
@@ -3336,6 +3342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Plane
   noteBody: "I remember getting this plane on my birthday last year.\n\nJamie bought
     it for me as he knew I always wanted to be a pilot. \n\nI never wanted to be
@@ -3653,6 +3660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Old Computer
   noteBody: "The laptop shows all the patient logs and the photographs from their
     patient room cameras. \n\nYou see them slowly turn into monsters day by day."

@@ -928,13 +928,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5108765585581739927}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.18, y: -4.3839555, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.24691443, w: 0.9690373}
+  m_LocalPosition: {x: 1.51, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5917113126998085996}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.59}
 --- !u!212 &4345251680389948616
 SpriteRenderer:
   serializedVersion: 2
@@ -1006,9 +1006,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Patient Log
-  noteBody: 'The Patient number #207 showed signs of hysteria once being injected
-    by *blurry*. Seek antidote immediatelly. '
+  noteBody: "The Patient number #207 showed signs of hysteria after being injected
+    by *blurry*. \r\n\r\nSeek antidote immediately. "
   noteImage: {fileID: 2679450770238305592, guid: d81f11a920ffbb13bb299ff0cbec18c8, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1586,9 +1587,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Torture Chair
-  noteBody: This chair is liek something I have never seen before. It has cuffs?
-    Were the patients strapped here? This is very twisted...
+  noteBody: An old steel chair with cuffs on hands and legs.
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1861,7 +1862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1902,6 +1903,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3922485904592158549, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7123587637890010159}
+    - targetCorrespondingSourceObject: {fileID: 3922485904592158549, guid: a776699a3a4beb379882e934ea65712e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 103637542227257580}
+    - targetCorrespondingSourceObject: {fileID: 3922485904592158549, guid: a776699a3a4beb379882e934ea65712e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 746932368690281295}
   m_SourcePrefab: {fileID: 100100000, guid: a776699a3a4beb379882e934ea65712e, type: 3}
 --- !u!1 &3041792681441443220 stripped
 GameObject:
@@ -1954,6 +1961,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.35, y: 0.8624}
   m_EdgeRadius: 0
+--- !u!114 &103637542227257580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041792681441443220}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: A Dusty Note
+  noteBody: 
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &746932368690281295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041792681441443220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: 
+  requireFlashlight: 0
+  collectAfterReading: 1
 --- !u!4 &5035214402916557485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
@@ -2469,6 +2512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Plea for Shut Down
   noteBody: Looks like paper from Health Control Embassy. Seems that they wanted
     to shut this place down because of the "unorthodox experiments" this hospital
@@ -3143,9 +3187,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Syringes on Table
-  noteBody: These are some old rusty syringes that were probably used on these patients.
-    They look awfully long and painful. How is this even legal?
+  noteBody: 'Old and rusty syringes.
+
+
+    They look awfully long and painful. '
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -3366,9 +3413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Polaroid Photograph
-  noteBody: These seem to be photographs of patients in this room. It looks like
-    they were taking evidence of their experiments they have been doing here.
+  noteBody: "Photographs of patients in the torture chair. \r\n\r\nThey don\u2019t
+    look like humans here either."
   noteImage: {fileID: 21300000, guid: 954e5231d17580641b80016b4821eb29, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0

@@ -712,6 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2716919460408538381}
   - component: {fileID: 965752340805293519}
+  - component: {fileID: 806234863532999371}
   m_Layer: 0
   m_Name: batteryAsset
   m_TagString: Untagged
@@ -728,7 +729,7 @@ Transform:
   m_GameObject: {fileID: 3458946707663589785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.96, y: 5.43, z: 0}
+  m_LocalPosition: {x: 0.64, y: 1.71, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -793,6 +794,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &806234863532999371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3458946707663589785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a04abb94fe701a4794b3e3337ee17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.GeneratorInteractable
+  phases: {fileID: 0}
+  nurseDoorPeek: {fileID: 0}
+  triggerZoneToEnable: {fileID: 0}
+  onStarted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4710044418142609433
 GameObject:
   m_ObjectHideFlags: 0
