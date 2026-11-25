@@ -21,6 +21,14 @@ public class NoteItem : MonoBehaviour
     [Header("After Reading")]
     public UnityEvent onFinishedReading = new UnityEvent();
 
+    public event System.Action ReadingCompleted;
+
+    public void FinishReading()
+    {
+        ReadingCompleted?.Invoke();
+        onFinishedReading?.Invoke();
+    }
+
     public string ContentTitle =>
         journalEntry != null ? journalEntry.Title : noteTitle;
 

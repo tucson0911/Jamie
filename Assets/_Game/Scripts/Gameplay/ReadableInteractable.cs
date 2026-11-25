@@ -25,14 +25,28 @@ namespace Jamie.Gameplay
 
         private void OnEnable()
         {
-            if (note != null)
-                note.onFinishedReading.AddListener(FinishedReading);
+            if (note == null)
+                return;
+
+            if (collectAfterReading &&
+                GameSession.GetOrCreate()
+                    .HasCollectedProp(note.journalEntry))
+            {
+                gameObject.SetActive(false);
+                return;
+            }
+
+            note.ReadingCompleted += RecordCollection;
+            note.onFinishedReading.AddListener(FinishedReading);
         }
 
         private void OnDisable()
         {
-            if (note != null)
-                note.onFinishedReading.RemoveListener(FinishedReading);
+            if (note == null)
+                return;
+
+            note.ReadingCompleted -= RecordCollection;
+            note.onFinishedReading.RemoveListener(FinishedReading);
         }
 
         public override bool CanInteract(WorldInteractor interactor)
@@ -47,6 +61,15 @@ namespace Jamie.Gameplay
         {
             if (CanInteract(interactor))
                 NoteManager.Instance.OpenNote(note);
+        }
+
+        private void RecordCollection()
+        {
+            if (!collectAfterReading)
+                return;
+
+            GameSession.GetOrCreate()
+                .MarkPropCollected(note.journalEntry);
         }
 
         private void FinishedReading()

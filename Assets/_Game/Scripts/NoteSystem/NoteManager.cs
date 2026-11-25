@@ -108,7 +108,7 @@ public class NoteManager : MonoBehaviour
             GameSession.GetOrCreate()
                 .AddJournalEntry(finishedNote.journalEntry);
 
-            finishedNote.onFinishedReading?.Invoke();
+            finishedNote.FinishReading();
         }
     }
 

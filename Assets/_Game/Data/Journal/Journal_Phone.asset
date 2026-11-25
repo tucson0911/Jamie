@@ -21,6 +21,6 @@ MonoBehaviour:
     please answer me, I am getting worried
 
 '
-  image: {fileID: 0}
+  image: {fileID: 3894415531740123212, guid: 7bd4fc7f5f8b3ef41ae44bf75f6ba2ac, type: 3}
   category: 0
   sortOrder: 20
