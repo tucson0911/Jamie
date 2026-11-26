@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 631441858299182189}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.24776004, w: 0.96882147}
-  m_LocalPosition: {x: 1.25, y: -0.86, z: 0}
+  m_LocalPosition: {x: 1.27, y: -0.86, z: 0}
   m_LocalScale: {x: 0.6078771, y: 0.6078771, z: 0.6078771}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -106,7 +106,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
   journalEntry: {fileID: 11400000, guid: 754b364ba280c42478dacae37c398f6d, type: 2}
   noteTitle: Jamie's Letter
-  noteBody: "Happy Birthday Alfie!\n\n\nThank you for sticking by me during my worst!\n\n\nCan't wait to get well so we can travel to Machu Picchu.\n\n\nHope you like the present. That's a little reminder that you can still pursue your dreams!\n\n\nAll the best, Jamie"
+  noteBody: 'Happy Birthday Alfie!
+
+
+
+    Thank you for sticking by me during my
+    worst!
+
+
+
+    Can''t wait to get well so we can travel to Machu Picchu.
+
+
+
+    Hope
+    you like the present. That''s a little reminder that you can still pursue your
+    dreams!
+
+
+
+    All the best, Jamie'
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -903,6 +922,7 @@ Transform:
   - {fileID: 1807015973809894553}
   - {fileID: 5331029538470960631}
   - {fileID: 4025912822106616577}
+  - {fileID: 1942162056989910073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5089533502790920795
@@ -1108,6 +1128,7 @@ GameObject:
   - component: {fileID: 7561714698155348770}
   - component: {fileID: 5592081686354974084}
   - component: {fileID: 4756953681690346543}
+  - component: {fileID: 8303397187708602272}
   m_Layer: 0
   m_Name: JamiesPhone
   m_TagString: Untagged
@@ -1125,7 +1146,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.27672777, w: 0.96094835}
   m_LocalPosition: {x: 0.5117137, y: -0.99531126, z: 0}
-  m_LocalScale: {x: 0.56232274, y: 0.56232274, z: 0.56232274}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8268459421194088518}
@@ -1179,7 +1200,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 5b18d6dd0e06ca042ac829bf06e15dde, type: 3}
+  m_Sprite: {fileID: -7837884908556923357, guid: 207a46e41c94c9347bbe67d64d3eeeb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1206,13 +1227,29 @@ MonoBehaviour:
   noteBody: 'Elle : Jamie please answer me, I am getting worried
 
 
-    50 missed calls from Dad'
-  noteImage: {fileID: 0}
+    50 missed
+    calls from Dad'
+  noteImage: {fileID: 3894415531740123212, guid: 7bd4fc7f5f8b3ef41ae44bf75f6ba2ac, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
   onFinishedReading:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8303397187708602272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244765788619500486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Mobile Phone
+  requireFlashlight: 1
+  collectAfterReading: 1
 --- !u!1 &6748577682592600556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1846,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d43dd10a3b33c14ea1f2d66aff5466b, type: 3}
+--- !u!4 &1942162056989910073 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2552889298960431845, guid: 8d43dd10a3b33c14ea1f2d66aff5466b, type: 3}
+  m_PrefabInstance: {fileID: 4151858519295827676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4253249991329208839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1822,7 +1864,7 @@ PrefabInstance:
       value: Jamie asset 5_21
       objectReference: {fileID: 0}
     - target: {fileID: 1424411805774562818, guid: 32e86db13b19b09028c8637d3dcc9f16, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5977950128870239556, guid: 32e86db13b19b09028c8637d3dcc9f16, type: 3}
@@ -2047,7 +2089,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2379342451413301710, guid: b447b733b35ed63ac8132046fff42e5f, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 3028911473297790514, guid: b447b733b35ed63ac8132046fff42e5f, type: 3}
@@ -2077,7 +2119,7 @@ PrefabInstance:
       value: Corner Desk
       objectReference: {fileID: 0}
     - target: {fileID: 2571209093678180904, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7089660428984782905, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
@@ -2310,7 +2352,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4057860975297675167, guid: a4ca08ac285427c7395d2e3e6b1b2674, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 4136517697211803157, guid: a4ca08ac285427c7395d2e3e6b1b2674, type: 3}
@@ -2388,7 +2430,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 1157897149562498416, guid: feab6ddda4ad2bea19f87746f83da2b2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 2052524431473777073, guid: feab6ddda4ad2bea19f87746f83da2b2, type: 3}
@@ -2488,7 +2530,8 @@ MonoBehaviour:
 
 
 
-    It could be cuts from a knife or someone trying to hold onto the table.
+    It could be cuts from a knife
+    or someone trying to hold onto the table.
 
 
 
@@ -2584,7 +2627,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756169608062587473, guid: 27f26177d20efe243ba3af659b14b74a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 967dd81008e4c7e4e9dcadf21fc8056f, type: 2}
     m_RemovedComponents: []

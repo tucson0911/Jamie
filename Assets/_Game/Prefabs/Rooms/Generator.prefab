@@ -1700,7 +1700,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5601801977239991015, guid: f6d67d98a2be536a798cc62afcffb7ba, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 967dd81008e4c7e4e9dcadf21fc8056f, type: 2}
     m_RemovedComponents: []
@@ -1762,7 +1762,7 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1055976244963780518, guid: ff2672549ee6202028a6455733e07634, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
@@ -1780,13 +1780,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2044944480297752245}
+    - targetCorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8497250352820261880}
   m_SourcePrefab: {fileID: 100100000, guid: ff2672549ee6202028a6455733e07634, type: 3}
 --- !u!4 &141172624083960524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 857907068908888393, guid: ff2672549ee6202028a6455733e07634, type: 3}
   m_PrefabInstance: {fileID: 725763641895592837}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3496336973794239933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+  m_PrefabInstance: {fileID: 725763641895592837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2044944480297752245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496336973794239933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Cabinet
+  noteBody: Cabinet with blood splatters all over it.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8497250352820261880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496336973794239933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Cabinet
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1001 &987615722189897149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1796,7 +1843,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 4370465874323918554, guid: d7e6d525bcfbbdd7f994b8ae48cead56, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 8575884743506275468, guid: d7e6d525bcfbbdd7f994b8ae48cead56, type: 3}
@@ -1956,7 +2003,7 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1055976244963780518, guid: ff2672549ee6202028a6455733e07634, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
@@ -1974,13 +2021,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6212462385572710839}
+    - targetCorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8089955218576574083}
   m_SourcePrefab: {fileID: 100100000, guid: ff2672549ee6202028a6455733e07634, type: 3}
 --- !u!4 &1900729295387545232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 857907068908888393, guid: ff2672549ee6202028a6455733e07634, type: 3}
   m_PrefabInstance: {fileID: 1263078096968134617}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3103067063285574113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+  m_PrefabInstance: {fileID: 1263078096968134617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6212462385572710839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103067063285574113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Cabinet
+  noteBody: Cabinet with blood splatters all over it.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8089955218576574083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103067063285574113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Cabinet
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1001 &1896401914717931813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1990,7 +2084,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 4370465874323918554, guid: d7e6d525bcfbbdd7f994b8ae48cead56, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 8575884743506275468, guid: d7e6d525bcfbbdd7f994b8ae48cead56, type: 3}
@@ -2110,7 +2204,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 924157378760808397, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
@@ -2164,6 +2258,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2390420590017762550}
+    - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9087152688872689324}
+    - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1213586525562475372}
   m_SourcePrefab: {fileID: 100100000, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
 --- !u!1 &5239783775182583514 stripped
 GameObject:
@@ -2216,6 +2316,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.457, y: 2.0504}
   m_EdgeRadius: 0
+--- !u!114 &9087152688872689324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239783775182583514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Generator
+  noteBody: Probably just powers up the whole building.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1213586525562475372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239783775182583514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Generator
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!4 &5290859227290825064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7627872747008006040, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
@@ -2230,7 +2366,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 924157378760808397, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
@@ -2284,6 +2420,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5598340570374664104}
+    - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1693995042703211462}
+    - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8146130164043227176}
   m_SourcePrefab: {fileID: 100100000, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
 --- !u!4 &6528694720821895127 stripped
 Transform:
@@ -2341,6 +2483,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.457, y: 2.0504}
   m_EdgeRadius: 0
+--- !u!114 &1693995042703211462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575553121711691877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Generator
+  noteBody: Probably just powers up the whole building.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8146130164043227176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6575553121711691877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Generator
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1001 &5291172089932568680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2390,7 +2568,7 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1055976244963780518, guid: ff2672549ee6202028a6455733e07634, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
@@ -2408,13 +2586,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2310136757345686968}
+    - targetCorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4648059605874455296}
   m_SourcePrefab: {fileID: 100100000, guid: ff2672549ee6202028a6455733e07634, type: 3}
 --- !u!4 &4794610756164794657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 857907068908888393, guid: ff2672549ee6202028a6455733e07634, type: 3}
   m_PrefabInstance: {fileID: 5291172089932568680}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8356729415012523600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4221867209917810232, guid: ff2672549ee6202028a6455733e07634, type: 3}
+  m_PrefabInstance: {fileID: 5291172089932568680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2310136757345686968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8356729415012523600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Cabinet
+  noteBody: Cabinet with blood splatters all over it.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4648059605874455296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8356729415012523600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Cabinet
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1001 &5537550217874856659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2468,7 +2693,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756169608062587473, guid: 27f26177d20efe243ba3af659b14b74a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 967dd81008e4c7e4e9dcadf21fc8056f, type: 2}
     m_RemovedComponents: []
@@ -2490,7 +2715,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 924157378760808397, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
@@ -2544,6 +2769,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8951691484918659723}
+    - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2029420881019783286}
+    - targetCorrespondingSourceObject: {fileID: 7494058098941956138, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 646536494631753929}
   m_SourcePrefab: {fileID: 100100000, guid: b73b2f1f888ed429299cf69fba1f9f01, type: 3}
 --- !u!4 &4221213072184271445 stripped
 Transform:
@@ -2601,6 +2832,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.457, y: 2.0504}
   m_EdgeRadius: 0
+--- !u!114 &2029420881019783286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273732527725733351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
+  noteTitle: Generator
+  noteBody: Probably just powers up the whole building.
+  noteImage: {fileID: 0}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &646536494631753929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4273732527725733351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Generator
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1001 &7927779673683555018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2610,7 +2877,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 4370465874323918554, guid: d7e6d525bcfbbdd7f994b8ae48cead56, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 8575884743506275468, guid: d7e6d525bcfbbdd7f994b8ae48cead56, type: 3}
@@ -2774,7 +3041,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5840763764143574409, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 967dd81008e4c7e4e9dcadf21fc8056f, type: 2}
     m_RemovedComponents: []
@@ -2840,7 +3107,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9215168548571064020, guid: fc6350c8d1a0e97b289421066247e090, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 967dd81008e4c7e4e9dcadf21fc8056f, type: 2}
     m_RemovedComponents: []
