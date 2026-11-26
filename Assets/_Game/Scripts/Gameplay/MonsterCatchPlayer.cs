@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Jamie.Gameplay
 {
@@ -7,6 +8,13 @@ namespace Jamie.Gameplay
     {
         [SerializeField] private PhaseController phases;
         [SerializeField] private DeathLoopController deathLoop;
+        [Header("Chase speed")]
+        [SerializeField, Min(0.1f)] private float chaseStartSpeed = 5f;
+        [SerializeField, Min(0.1f)] private float chaseEndSpeed = 8f;
+        [SerializeField, Min(0.1f)] private float speedRampSeconds = 5f;
+
+        private NavMeshAgent chaseAgent;
+        private float chaseElapsed;
 
         private bool caught;
 
@@ -25,8 +33,35 @@ namespace Jamie.Gameplay
             }
         }
 
+        private void Update()
+        {
+            if (caught || Time.timeScale <= 0f ||
+                phases == null || phases.CurrentPhase != HospitalPhase.First ||
+                deathLoop == null || deathLoop.IsTransitioning ||
+                chaseAgent == null || !chaseAgent.isActiveAndEnabled ||
+                !chaseAgent.isOnNavMesh)
+            {
+                return;
+            }
+
+            chaseElapsed += Time.deltaTime;
+
+            float progress = Mathf.Clamp01(
+                chaseElapsed / Mathf.Max(0.1f, speedRampSeconds));
+
+            chaseAgent.speed = Mathf.Lerp(
+                chaseStartSpeed, chaseEndSpeed, progress);
+        }
+
         private void OnEnable()
         {
+            chaseAgent = GetComponent<NavMeshAgent>();
+            chaseElapsed = 0f;
+            caught = false;
+
+            if (chaseAgent != null)
+                chaseAgent.speed = chaseStartSpeed;
+
             if (phases == null)
                 return;
 
