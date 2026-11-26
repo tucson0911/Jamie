@@ -928,13 +928,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5108765585581739927}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.18, y: -4.3839555, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.24691443, w: 0.9690373}
+  m_LocalPosition: {x: 1.51, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5917113126998085996}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.59}
 --- !u!212 &4345251680389948616
 SpriteRenderer:
   serializedVersion: 2
@@ -1006,9 +1006,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: b4efbb9a03ea30e4a8474908185b668f, type: 2}
   noteTitle: Patient Log
-  noteBody: 'The Patient number #207 showed signs of hysteria once being injected
-    by *blurry*. Seek antidote immediatelly. '
+  noteBody: "The Patient number #207 showed signs of hysteria after being injected
+    by *blurry*. \r\n\r\nSeek antidote immediately. "
   noteImage: {fileID: 2679450770238305592, guid: d81f11a920ffbb13bb299ff0cbec18c8, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1546,7 +1547,7 @@ PrefabInstance:
       value: 33.222
       objectReference: {fileID: 0}
     - target: {fileID: 6397000952963226537, guid: 0dcb9a2836bd08333a7e0c50ff0d171d, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 6828418422338783296, guid: 0dcb9a2836bd08333a7e0c50ff0d171d, type: 3}
@@ -1586,9 +1587,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 03b697ce48af91afcf78adba126e4b39, type: 2}
   noteTitle: Torture Chair
-  noteBody: This chair is liek something I have never seen before. It has cuffs?
-    Were the patients strapped here? This is very twisted...
+  noteBody: An old steel chair with cuffs on hands and legs.
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1690,7 +1691,7 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 1055976244963780518, guid: ff2672549ee6202028a6455733e07634, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
@@ -1728,7 +1729,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 4185571122402023611, guid: 2618ed27bf5ae42adb1a8a699c13bfd7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 6296317416584565473, guid: 2618ed27bf5ae42adb1a8a699c13bfd7, type: 3}
@@ -1848,7 +1849,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 1307264218713918311, guid: a776699a3a4beb379882e934ea65712e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 3922485904592158549, guid: a776699a3a4beb379882e934ea65712e, type: 3}
@@ -1861,7 +1862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.45
+      value: 2.25
       objectReference: {fileID: 0}
     - target: {fileID: 6465280809909067884, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2012,7 +2013,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7857619595583928560, guid: 0dbc2132384c9d2a3a3078ec41c58a8d, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2141,7 +2142,7 @@ PrefabInstance:
       value: Jamie asset 5_21
       objectReference: {fileID: 0}
     - target: {fileID: 1424411805774562818, guid: 32e86db13b19b09028c8637d3dcc9f16, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5977950128870239556, guid: 32e86db13b19b09028c8637d3dcc9f16, type: 3}
@@ -2257,7 +2258,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 17587679533110093, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 844444804046032082, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
@@ -2375,7 +2376,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7810180896094584873, guid: 0c5d632979a0c9ae6a0cebe73b1fd12e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2401,7 +2402,7 @@ PrefabInstance:
       value: Jamie asset 5_15
       objectReference: {fileID: 0}
     - target: {fileID: 5237106581049292887, guid: 6eab44c73df5df9cba726c0d3b6eab19, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7140060222246470409, guid: 6eab44c73df5df9cba726c0d3b6eab19, type: 3}
@@ -2469,10 +2470,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 79370df212e4fdb4c81deda8f6bd53e3, type: 2}
   noteTitle: Plea for Shut Down
-  noteBody: Looks like paper from Health Control Embassy. Seems that they wanted
-    to shut this place down because of the "unorthodox experiments" this hospital
-    practised.
+  noteBody: Looks like paper from Health Control Embassy. Seems that they wanted to
+    shut this place down because of the "unorthodox experiments" this hospital practised.
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2501,7 +2502,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981496192559359986, guid: 4b5e84f74b53c0c2dbe8a40b71c13a72, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 8914373815941247321, guid: 4b5e84f74b53c0c2dbe8a40b71c13a72, type: 3}
@@ -2567,7 +2568,7 @@ PrefabInstance:
       value: Jamie asset 5_21 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1424411805774562818, guid: 32e86db13b19b09028c8637d3dcc9f16, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5977950128870239556, guid: 32e86db13b19b09028c8637d3dcc9f16, type: 3}
@@ -2691,7 +2692,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5981496192559359986, guid: 4b5e84f74b53c0c2dbe8a40b71c13a72, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 8914373815941247321, guid: 4b5e84f74b53c0c2dbe8a40b71c13a72, type: 3}
@@ -2753,7 +2754,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 150947507292586496, guid: 25992fcfa00c3567a9081833c98643bb, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 387579727144187163, guid: 25992fcfa00c3567a9081833c98643bb, type: 3}
@@ -2827,7 +2828,7 @@ PrefabInstance:
       value: Sink
       objectReference: {fileID: 0}
     - target: {fileID: 5106758326108097522, guid: 6a1cb658534b34905b40b4ffd86f3fa7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 8896581742512018135, guid: 6a1cb658534b34905b40b4ffd86f3fa7, type: 3}
@@ -2943,7 +2944,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 1307264218713918311, guid: a776699a3a4beb379882e934ea65712e, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 3922485904592158549, guid: a776699a3a4beb379882e934ea65712e, type: 3}
@@ -3063,7 +3064,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 1963962428195471235, guid: e684cacf447d001fcbb27715d8782ad5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 3014822253733950045, guid: e684cacf447d001fcbb27715d8782ad5, type: 3}
@@ -3143,9 +3144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: e8db393eba3bf175dd229e3d0e8265b1, type: 2}
   noteTitle: Syringes on Table
-  noteBody: These are some old rusty syringes that were probably used on these patients.
-    They look awfully long and painful. How is this even legal?
+  noteBody: 'Old and rusty syringes.
+
+
+    They look awfully long and painful. '
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -3267,7 +3271,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5840763764143574409, guid: f516d469f2d7dba7ab3e2f4ad683b702, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 967dd81008e4c7e4e9dcadf21fc8056f, type: 2}
     m_RemovedComponents: []
@@ -3289,7 +3293,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 5917113126998085996}
     m_Modifications:
     - target: {fileID: 207626631517419524, guid: c7b69c093ab0a73dc81ae2c21725df72, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 4441147650219620514, guid: c7b69c093ab0a73dc81ae2c21725df72, type: 3}
@@ -3366,9 +3370,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 230673e5345372d4b94ccd18f7c1c2e3, type: 2}
   noteTitle: Polaroid Photograph
-  noteBody: These seem to be photographs of patients in this room. It looks like
-    they were taking evidence of their experiments they have been doing here.
+  noteBody: "Photographs of patients in the torture chair. \r\n\r\nThey don\u2019t
+    look like humans here either."
   noteImage: {fileID: 21300000, guid: 954e5231d17580641b80016b4821eb29, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0

@@ -7,6 +7,7 @@ namespace Jamie.Gameplay
     {
         [SerializeField] private Transform doorVisual;
         [SerializeField] private Collider2D blockingCollider;
+        [SerializeField] private Transform openDoorVisual;
 
         public bool IsOpen { get; private set; }
 
@@ -37,6 +38,10 @@ namespace Jamie.Gameplay
             IsOpen = open;
             blockingCollider.enabled = !open;
             doorVisual.gameObject.SetActive(!open);
+            if (openDoorVisual != null)
+            {
+                openDoorVisual.gameObject.SetActive(open);
+            }
         }
     }
 }
