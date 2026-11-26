@@ -9,19 +9,13 @@ Working game title: Jamie. Dystopian psychological horror exploration. The team 
 3. In Unity Hub, add the cloned project folder from disk. Let package resolution and asset import finish.
 4. Open `Assets/_Game/Scenes/Playfield.unity`, then enter Play mode. Click the Game view to give it keyboard/mouse focus.
 
-## Placeholder playfield
-
-The first blockout has five connected rooms, open doorways, colliding walls/furniture, a mouse-aimed player, a following camera, and a toggleable 2D flashlight with shadows. All scene objects and simple placeholder sprites are editable in Unity. There are no enemies, story progression, or interaction systems yet.
-
 | Input | Action |
 | --- | --- |
 | WASD or arrow keys | Move |
 | Mouse | Aim / face the cursor |
 | Hold Shift | Sprint |
 | F | Toggle flashlight |
-| R | Return to the starting position |
-
-The current build scene is `Playfield.unity`; the prototype build target is Windows x64. Local exported builds belong under ignored `Builds/`.
+| Tab | Open journal |
 
 ## Team
 
