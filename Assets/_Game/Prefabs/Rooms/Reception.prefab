@@ -107,6 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6144951451697752129}
+  - component: {fileID: 5510063968963200609}
   m_Layer: 0
   m_Name: Reception
   m_TagString: Untagged
@@ -4452,3 +4453,20 @@ MonoBehaviour:
   displayName: Receptionist's Desk
   requireFlashlight: 1
   collectAfterReading: 0
+--- !u!114 &5510063968963200609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134931017480525891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: Reception
+  floors:
+  - {fileID: 3229009367576427505}
+  boundaryInset: 0.1
+  priority: 10

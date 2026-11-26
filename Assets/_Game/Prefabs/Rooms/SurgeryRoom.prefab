@@ -872,6 +872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5917113126998085996}
+  - component: {fileID: 706927241111972668}
   m_Layer: 0
   m_Name: SurgeryRoom
   m_TagString: Untagged
@@ -2597,3 +2598,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4940033950371060391, guid: 27f26177d20efe243ba3af659b14b74a, type: 3}
   m_PrefabInstance: {fileID: 6745628906127732286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &706927241111972668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083044366831299394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: Surgery
+  floors:
+  - {fileID: 3952859758236896968}
+  boundaryInset: 0.1
+  priority: 10

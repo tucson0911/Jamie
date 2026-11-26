@@ -2035,6 +2035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732338507503558145}
+  - component: {fileID: 3551764315119154880}
   m_Layer: 0
   m_Name: Office
   m_TagString: Untagged
@@ -3980,3 +3981,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7438046393518444935, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
   m_PrefabInstance: {fileID: 3793828299703884757}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3551764315119154880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4862269132224365819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: Administration
+  floors:
+  - {fileID: 245864822155112736}
+  boundaryInset: 0.1
+  priority: 10

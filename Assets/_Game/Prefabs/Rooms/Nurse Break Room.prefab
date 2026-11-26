@@ -1965,6 +1965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5917113126998085996}
+  - component: {fileID: 6310374147896416482}
   m_Layer: 0
   m_Name: Nurse Break Room
   m_TagString: Untagged
@@ -3360,3 +3361,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6877357165896545166, guid: 93aed3aca7c979dee84a21e8a4a0fcc2, type: 3}
   m_PrefabInstance: {fileID: 323373862786391649}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6310374147896416482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083044366831299394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: Nurse
+  floors:
+  - {fileID: 3952859758236896968}
+  boundaryInset: 0.1
+  priority: 10
