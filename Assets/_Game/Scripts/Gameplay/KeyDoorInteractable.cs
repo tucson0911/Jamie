@@ -8,6 +8,8 @@ namespace Jamie.Gameplay
     {
         [SerializeField] private string doorName = "reception door";
         [SerializeField] private bool needsKey = true;
+        [SerializeField, Tooltip("Keep this door locked in every phase.")]
+        private bool permanentlyLocked;
 
         [SerializeField] private ItemId requiredItem =
             ItemId.ReceptionKey;
@@ -27,6 +29,9 @@ namespace Jamie.Gameplay
         {
             get
             {
+                if (permanentlyLocked)
+                    return $"E - Examine {doorName} (locked)";
+
                 if (phaseLock != null && phaseLock.IsLocked)
                 {
                     return $"E - Examine {doorName} " +
@@ -55,6 +60,12 @@ namespace Jamie.Gameplay
         {
             if (!CanInteract(interactor))
                 return;
+
+            if (permanentlyLocked)
+            {
+                Debug.Log($"[Door] The {doorName} is locked.", this);
+                return;
+            }
 
             if (phaseLock != null && !phaseLock.TryAccess())
                 return;    
