@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5648727035148199508}
+  - component: {fileID: 2853573621372908366}
   m_Layer: 0
   m_Name: GeneratorCorridor
   m_TagString: Untagged
@@ -1440,3 +1441,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5488312498115529650, guid: 90a5dbea5460fdb0db0486a1b5fbe4b8, type: 3}
   m_PrefabInstance: {fileID: 6972357173426533063}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2853573621372908366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215607875975119296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: Hallway
+  floors:
+  - {fileID: 3632104272194301808}
+  boundaryInset: 0.1
+  priority: 0

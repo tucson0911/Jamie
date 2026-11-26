@@ -2486,6 +2486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2076241668969028108}
+  - component: {fileID: 5821206891067250565}
   m_Layer: 0
   m_Name: Center Corridor
   m_TagString: Untagged
@@ -2766,8 +2767,8 @@ Transform:
   m_GameObject: {fileID: 7881535575926759411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4, y: 22, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 3.4, y: 24, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 626104899509558180}
@@ -3983,3 +3984,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5488312498115529650, guid: 90a5dbea5460fdb0db0486a1b5fbe4b8, type: 3}
   m_PrefabInstance: {fileID: 8764873198458666628}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5821206891067250565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678549342526404256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: Hallway
+  floors:
+  - {fileID: 3353200054220342151}
+  - {fileID: 6857133118464854863}
+  boundaryInset: 0.1
+  priority: 0

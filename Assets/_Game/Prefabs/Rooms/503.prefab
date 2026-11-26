@@ -2965,6 +2965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 650176221067501706}
+  - component: {fileID: 8239450224954646781}
   m_Layer: 0
   m_Name: 503
   m_TagString: Untagged
@@ -3530,3 +3531,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8914373815941247321, guid: 4b5e84f74b53c0c2dbe8a40b71c13a72, type: 3}
   m_PrefabInstance: {fileID: 7878753855344954932}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8239450224954646781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9211788672056892762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9241370cff89495bbdd798d25c0a8aad, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.RoomNameArea
+  roomName: 503
+  floors:
+  - {fileID: 4592079417195001483}
+  boundaryInset: 0.1
+  priority: 10

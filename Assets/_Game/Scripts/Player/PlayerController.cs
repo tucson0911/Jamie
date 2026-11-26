@@ -10,6 +10,7 @@ namespace Jamie
     {
         [SerializeField, Min(0.1f)] private float walkSpeed = 3f;
         [SerializeField, Min(0.1f)] private float sprintSpeed = 4.8f;
+        [SerializeField, Min(1f)] private float aimTurnSpeed = 180f;
         [SerializeField] private Camera viewCamera;
         [SerializeField] private Transform facing;
         [SerializeField] private Light2D visionCone;
@@ -74,7 +75,16 @@ namespace Jamie
                 Vector2 target = viewCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
                 Vector2 direction = target - (Vector2)transform.position;
                 if (direction.sqrMagnitude > 0.01f)
-                    facing.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f);
+                {
+                    float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+
+                    Quaternion targetRotation = Quaternion.Euler(0f, 0f, targetAngle);
+
+                    facing.rotation = Quaternion.RotateTowards(
+                        facing.rotation,
+                        targetRotation,
+                        aimTurnSpeed * Time.deltaTime);
+                }
             }
         }
 
