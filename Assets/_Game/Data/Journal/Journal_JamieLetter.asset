@@ -13,12 +13,7 @@ MonoBehaviour:
   m_Name: Journal_JamieLetter
   m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.JournalEntry
   title: Jamie's Letter
-  body: "Dear Alfie,\n\nI wish you the happiest birthday! \n\nMy travel partner and
-    the closest friend I ever had. You have been here for the good and bad times
-    and I hope these bad ones will be over soon. I miss our travels and I hope we
-    can go to that Machu Picchu trip soon! \n\nAnyways remember to stay true to yourself
-    and your dreams! Life\u2019s too short not to pursue your dreams!! \n\nAll the
-    best, Jamie"
+  body: "Happy Birthday Alfie!\n\n\nThank you for sticking by me during my worst!\n\n\nCan't wait to get well so we can travel to Machu Picchu.\n\n\nHope you like the present. That's a little reminder that you can still pursue your dreams!\n\n\nAll the best, Jamie"
   image: {fileID: 0}
   category: 0
   sortOrder: 20

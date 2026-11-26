@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Journal_ExperimentationPhoto
   m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.JournalEntry
   title: Experiment Photograph
-  body: These seem to be photographs of patients in this room. It looks like they
-    were taking evidence of their experiments they have been doing here.
-  image: {fileID: 0}
+  body: "Photographs of patients in the torture chair. \r\n\r\nThey don\u2019t look like humans here either."
+  image: {fileID: 21300000, guid: 954e5231d17580641b80016b4821eb29, type: 3}
   category: 0
   sortOrder: 20

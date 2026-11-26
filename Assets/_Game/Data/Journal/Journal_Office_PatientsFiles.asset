@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c0ce2298f403d6408d5592d0c40c43c, type: 3}
+  m_Name: Journal_Office_PatientsFiles
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.JournalEntry
+  title: Pills lying on the floor
+  body: "Jamie Hill\nAged 32\nDiagnose: Lymphoma\nStage 3\n\nDays spent in St Mary Hospital: 72\n\nNumber of Experiments executed: 5\n\nSuccessful treatments: 0\n\nCurrent State: Heavy breathing, difficulty walking, appearance significantly altered, having hallucinations due to the heavy medication, appetite increased \n\nNext Test: Hemostatil Dosage (50 ml)"
+  image: {fileID: 0}
+  category: 0
+  sortOrder: 30

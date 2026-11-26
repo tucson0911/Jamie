@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Doctor's Certificate
   noteBody: "I was never proud of doing this. I was forced by my dad. \n\nHe wanted
     me to be just like him."
@@ -355,6 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Key Room 502
   noteBody: 'Oh wait, the key for the locked room? '
   noteImage: {fileID: 0}
@@ -1578,13 +1580,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 4c31f24c57dcce8ed7a15c78b14272cc, type: 2}
   noteTitle: Patient's Files
-  noteBody: "You open the sealed file and read the patient's name. \n\nJamie Hill\nAged
-    32\nDiagnose: Lymphoma\nStage 3\n\nDays spent in St Mary Hospital: 72\n\nNumber
-    of Experiments executed: 5\n\nSuccessful treatments: 0\n\nCurrent State: Heavy
-    breathing, difficulty walking, appearance significantly altered, having hallucinations
-    due to the heavy medication, appetite increased \n\nNext Test: Hemostatil Dosage
-    (50 ml) "
+  noteBody: "Jamie Hill\nAged 32\nDiagnose: Lymphoma\nStage 3\n\nDays spent in St
+    Mary Hospital: 72\n\nNumber of Experiments executed: 5\n\nSuccessful treatments:
+    0\n\nCurrent State: Heavy breathing, difficulty walking, appearance significantly
+    altered, having hallucinations due to the heavy medication, appetite increased
+    \n\nNext Test: Hemostatil Dosage (50 ml)"
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1695,10 +1697,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Pills on the floor
-  noteBody: "Pill Description: Plerifoxin Roxabicin\n\nUsed for calming down the
-    hallucinations and is used as a relaxant after a traumatic operation. \n\nPossible
-    Side Effects: Prolonged and extremely deep sleep and dissociation."
+  noteBody: "Pill Description: Plerifoxin Roxabicin\n\nUsed for calming down the hallucinations
+    and is used as a relaxant after a traumatic operation. \n\nPossible Side Effects:
+    Prolonged and extremely deep sleep and dissociation."
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2010,13 +2013,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Name Card
   noteBody: 'This is the doctor''s name card.
 
 
-    Clark. My dad always used to
-    be proud of his surname. He was happy he had a son who will be able to carry
-    his heritage. '
+    Clark. My dad always used to be proud of his surname. He was happy he had a son
+    who will be able to carry his heritage. '
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2184,10 +2187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: f3285d4ef72d9ccf2f688d36631cfeb4, type: 2}
   noteTitle: Family Portrait
-  noteBody: 'I remember the person in this photograph. That''s my dad in his doctor''s
-    suit. Taking this photograph was one of the rare moments he would spend with
-    me. '
+  noteBody: "I remember getting this photograph taken.\n\nI was only 3 years old.\n\nThat's
+    my dad in his doctor's suit. \n\nTaking this photograph was one of the rare moments
+    he would spend with me. "
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2797,11 +2801,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: A Rusty Gas Mask
   noteBody: "The gas mask looks like it has been worn before. There must be a reason
-    why there's a mask in a hospital like this. Is it for the gas experiments so
-    that the staff can be safe? \n\nWhat if I am the one being influenced by this
-    gas?"
+    why there's a mask in a hospital like this. Is it for the gas experiments so that
+    the staff can be safe? \n\nWhat if I am the one being influenced by this gas?"
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -3515,10 +3519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Plane
   noteBody: "I remember getting this plane on my birthday last year.\n\nJamie bought
-    it for me as he knew I always wanted to be a pilot. \n\nI never wanted to be
-    a part of this. "
+    it for me as he knew I always wanted to be a pilot. \n\nI never wanted to be a
+    part of this. "
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -3706,7 +3711,7 @@ PrefabInstance:
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3732,7 +3737,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2468959829914691415, guid: 65c9c0f52a3f821c78808642821ca0c7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5880174946017103778, guid: 65c9c0f52a3f821c78808642821ca0c7, type: 3}
@@ -3876,7 +3881,7 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5495554337028186667, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7438046393518444935, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
@@ -3960,6 +3965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 0}
   noteTitle: Old Computer
   noteBody: "The laptop shows all the patient logs and the photographs from their
     patient room cameras. \n\nYou see them slowly turn into monsters day by day."

@@ -1228,6 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: d5a1b26ee1b17954b8158b9dfea4757b, type: 2}
   noteTitle: Newspaper
   noteBody: The famous victorain hospital sold to one of the most prestigious doctors
     of this decade, Dr Smith. Although his background is mysterious, his cancer research
@@ -1951,7 +1952,7 @@ PrefabInstance:
       value: Chair (24)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2017,7 +2018,7 @@ PrefabInstance:
       value: Chair (8)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2083,7 +2084,7 @@ PrefabInstance:
       value: Chair (4)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2149,7 +2150,7 @@ PrefabInstance:
       value: Chair (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2215,7 +2216,7 @@ PrefabInstance:
       value: Chair (13)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2281,7 +2282,7 @@ PrefabInstance:
       value: Chair (2)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2347,7 +2348,7 @@ PrefabInstance:
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2413,7 +2414,7 @@ PrefabInstance:
       value: Chair (26)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2479,7 +2480,7 @@ PrefabInstance:
       value: Chair (16)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2545,7 +2546,7 @@ PrefabInstance:
       value: Chair (22)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2567,7 +2568,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 6144951451697752129}
     m_Modifications:
     - target: {fileID: 3028056340396525595, guid: 04d0b75248dad4930a3e07bad4c62b22, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7257700632456841236, guid: 04d0b75248dad4930a3e07bad4c62b22, type: 3}
@@ -2685,7 +2686,7 @@ PrefabInstance:
       value: Chair (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2751,7 +2752,7 @@ PrefabInstance:
       value: Chair (5)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2817,7 +2818,7 @@ PrefabInstance:
       value: Chair (15)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2883,7 +2884,7 @@ PrefabInstance:
       value: Chair (10)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -2905,7 +2906,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 6144951451697752129}
     m_Modifications:
     - target: {fileID: 2468959829914691415, guid: 65c9c0f52a3f821c78808642821ca0c7, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5880174946017103778, guid: 65c9c0f52a3f821c78808642821ca0c7, type: 3}
@@ -3069,7 +3070,7 @@ PrefabInstance:
       value: Chair (23)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3135,7 +3136,7 @@ PrefabInstance:
       value: Chair (11)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3201,7 +3202,7 @@ PrefabInstance:
       value: Chair (7)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3267,7 +3268,7 @@ PrefabInstance:
       value: Chair (25)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3333,7 +3334,7 @@ PrefabInstance:
       value: Chair (17)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3399,7 +3400,7 @@ PrefabInstance:
       value: Chair (21)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3465,7 +3466,7 @@ PrefabInstance:
       value: Chair (6)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3534,7 +3535,7 @@ PrefabInstance:
       value: Chair (20)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3600,7 +3601,7 @@ PrefabInstance:
       value: Chair (14)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3666,7 +3667,7 @@ PrefabInstance:
       value: Chair (12)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3732,7 +3733,7 @@ PrefabInstance:
       value: Chair (18)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3754,7 +3755,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 6144951451697752129}
     m_Modifications:
     - target: {fileID: 4354663237475806725, guid: 1ccd07711d14fe931b72188ce2b60e15, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5263144065516974699, guid: 1ccd07711d14fe931b72188ce2b60e15, type: 3}
@@ -3864,7 +3865,7 @@ PrefabInstance:
       value: Chair (9)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3926,7 +3927,7 @@ PrefabInstance:
       value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 1055976244963780518, guid: ff2672549ee6202028a6455733e07634, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 2731218672072672228, guid: ff2672549ee6202028a6455733e07634, type: 3}
@@ -4004,7 +4005,11 @@ PrefabInstance:
       value: TEDDYYYYYY
       objectReference: {fileID: 0}
     - target: {fileID: 8419760993247292804, guid: 9d4f00854ba0f572789413d325d0768f, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419760993247292804, guid: 9d4f00854ba0f572789413d325d0768f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -4032,6 +4037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: c553de411e0c40143aa8a170b3e27248, type: 2}
   noteTitle: Teddy Bear
   noteBody: "Get well soon! I can't wait for you to be home again! \nLove, Elle "
   noteImage: {fileID: 0}
@@ -4098,7 +4104,7 @@ PrefabInstance:
       value: Chair (19)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -4164,7 +4170,7 @@ PrefabInstance:
       value: Chair (27)
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -4193,7 +4199,7 @@ PrefabInstance:
       value: Corner Desk
       objectReference: {fileID: 0}
     - target: {fileID: 2571209093678180904, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7089660428984782905, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
@@ -4249,6 +4255,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7126539447744549322}
+    - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8763730297657036478}
+    - targetCorrespondingSourceObject: {fileID: 1061531427922800745, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7430518918926203592}
   m_SourcePrefab: {fileID: 100100000, guid: b89a1af28ee26e949a4a2a34d69c12e8, type: 3}
 --- !u!4 &1618212145876010433 stripped
 Transform:
@@ -4398,3 +4410,45 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.684, y: 0.5376}
   m_EdgeRadius: 0
+--- !u!114 &8763730297657036478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839953580801779089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
+  journalEntry: {fileID: 11400000, guid: 8100dffa0ebeabacf8da1835b0c1b678, type: 2}
+  noteTitle: Receptionist's Desk
+  noteBody: 'This desk is filled with papers.
+
+
+    Last patient is logged May 2025.
+
+
+    Patient #207 *name blurred* is currently residing in room 502. '
+  noteImage: {fileID: -9076402110922831160, guid: d9b93caf6790792468d1c40706adde12, type: 3}
+  noteImageWidth: 0
+  noteImageHeight: 0
+  onFinishedReading:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7430518918926203592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8839953580801779089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Receptionist's Desk
+  requireFlashlight: 1
+  collectAfterReading: 0
