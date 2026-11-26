@@ -446,7 +446,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  journalEntry: {fileID: 0}
+  journalEntry: {fileID: 11400000, guid: 872613b1d09fb94aa4e42fc71f8238f9, type: 2}
   noteTitle: Woman's Jacket
   noteBody: 'It smells so nice.
 
@@ -672,7 +672,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  journalEntry: {fileID: 0}
+  journalEntry: {fileID: 11400000, guid: 617ae412125379e261e725a1491bc209, type: 2}
   noteTitle: MRI Machine
   noteBody: 'There are some blood stains leading to here.
 
@@ -742,9 +742,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
-  displayName: note
+  displayName: MRI Machine
   requireFlashlight: 0
-  collectAfterReading: 1
+  collectAfterReading: 0
 --- !u!61 &7010440903719086048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1592,7 +1592,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1637,7 +1637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  journalEntry: {fileID: 0}
+  journalEntry: {fileID: 11400000, guid: 2d5fcdde444f0b6a06698b9dff740bfe, type: 2}
   noteTitle: Body Scans
   noteBody: "Looks like these monitors are still on.\n\nThere are some spots around
     the neck and underarms. \n\nMust be inflamed lymph nodes."
@@ -2009,6 +2009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4855516524308297600}
   - component: {fileID: 1193435014917157748}
+  - component: {fileID: 3858860332486562639}
   m_Layer: 0
   m_Name: Jamie asset 2_16
   m_TagString: Untagged
@@ -2057,7 +2058,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2090,6 +2091,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &3858860332486562639
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266441789323796527}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.03125, y: 0.90625}
+    newSize: {x: 1.03125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.03125, y: 0.90625}
+  m_EdgeRadius: 0
 --- !u!1 &8672723454426833835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2100,6 +2147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895667518472353991}
   - component: {fileID: 6887262094683343360}
+  - component: {fileID: 6555848974310565563}
   m_Layer: 0
   m_Name: Jamie asset 1_12
   m_TagString: Untagged
@@ -2148,7 +2196,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2181,6 +2229,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &6555848974310565563
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672723454426833835}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.3125, y: 1.71875}
+    newSize: {x: 1.3125, y: 1.71875}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.3125, y: 1.71875}
+  m_EdgeRadius: 0
 --- !u!1 &8970927944680499346
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2452,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8518320170296033266}
     m_Modifications:
+    - target: {fileID: 1307264218713918311, guid: a776699a3a4beb379882e934ea65712e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 3922485904592158549, guid: a776699a3a4beb379882e934ea65712e, type: 3}
       propertyPath: m_Name
       value: Jamie asset 5_10
@@ -2436,7 +2534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  journalEntry: {fileID: 0}
+  journalEntry: {fileID: 11400000, guid: f652ab65af5d9de9e75847a507aee175, type: 2}
   noteTitle: 'Medical Cabinet '
   noteBody: "All pills are in foreign language. \n\nWhere can they possibly import
     them from?"

@@ -12,15 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c0ce2298f403d6408d5592d0c40c43c, type: 3}
   m_Name: Journal_Phone
   m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.JournalEntry
-  title: Jamie's Phone?
-  body: '50 missed calls from Dad
-
-    33 missed calls from Elle
-
-    Elle : My love
-    please answer me, I am getting worried
-
-'
-  image: {fileID: 0}
+  title: "Mobile Phone"
+  body: "Elle : Jamie please answer me, I am getting worried\n\n50 missed calls from Dad"
+  image: {fileID: 3894415531740123212, guid: 7bd4fc7f5f8b3ef41ae44bf75f6ba2ac, type: 3}
   category: 0
   sortOrder: 20

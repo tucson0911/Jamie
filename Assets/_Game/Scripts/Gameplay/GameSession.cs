@@ -15,6 +15,8 @@ namespace Jamie.Gameplay
 
         public IReadOnlyList<JournalEntry> JournalEntries => journalEntries;
 
+        private readonly HashSet<JournalEntry> collectedProps = new();
+
         public event Action JournalChanged;
 
         public bool HasFlashlight { get; private set; }
@@ -69,6 +71,20 @@ namespace Jamie.Gameplay
             Debug.Log($"[Journal] Collected: {entry.Title}", this);
 
             JournalChanged?.Invoke();
+            return true;
+        }
+
+        public bool HasCollectedProp(JournalEntry entry)
+        {
+            return entry != null && collectedProps.Contains(entry);
+        }
+
+        public bool MarkPropCollected(JournalEntry entry)
+        {
+            if (entry == null || !collectedProps.Add(entry))
+                return false;
+
+            Debug.Log($"[Collection] Picked up: {entry.Title}", this);
             return true;
         }
 

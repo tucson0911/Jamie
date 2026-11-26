@@ -428,6 +428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5160219500488822442}
   - component: {fileID: 1136890581153524051}
+  - component: {fileID: 4755241606622109354}
   m_Layer: 0
   m_Name: Jamie's Cupboard
   m_TagString: Untagged
@@ -477,7 +478,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -510,6 +511,52 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!61 &4755241606622109354
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150164128231334215}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.125, y: 3.125}
+    newSize: {x: 3.125, y: 3.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.125, y: 3.125}
+  m_EdgeRadius: 0
 --- !u!1 &1837780813873517563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1196,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1240,25 +1287,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  journalEntry: {fileID: 0}
+  journalEntry: {fileID: 11400000, guid: fd1f3212facc46c12bb0fb5f1cdc8003, type: 2}
   noteTitle: Alfie's letter to Jamie
   noteBody: 'Dear Jamie,
 
-    
 
-    I am getting worried about your sickness and
-    wanted to help you out.
 
-    
+    I am getting worried about your sickness and wanted
+    to help you out.
 
-    My family friend works at this hospital,
-    and I managed to get you a free slot at the hospital. Their research methods
-    are outstanding, and their success rate is 99%.
 
-    
 
-    Please consider
-    it. I am sending you their contacts. '
+    My family friend works at this hospital, and I managed
+    to get you a free slot at the hospital. Their research methods are outstanding,
+    and their success rate is 99%.
+
+
+
+    Please consider it. I am sending you their
+    contacts. '
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -1700,7 +1747,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 264966530973288859, guid: 56af198a3d04acbe899f15c0fca21cdf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7265671383116017185}
+    - targetCorrespondingSourceObject: {fileID: 264966530973288859, guid: 56af198a3d04acbe899f15c0fca21cdf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1092411488000385062}
   m_SourcePrefab: {fileID: 100100000, guid: 56af198a3d04acbe899f15c0fca21cdf, type: 3}
+--- !u!212 &2355731576180539821 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 157197442783060210, guid: 56af198a3d04acbe899f15c0fca21cdf, type: 3}
+  m_PrefabInstance: {fileID: 2494791191410155871}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2392008407231064260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 264966530973288859, guid: 56af198a3d04acbe899f15c0fca21cdf, type: 3}
@@ -1752,6 +1807,59 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.0124, y: 0.7052}
   m_EdgeRadius: 0
+--- !u!114 &1092411488000385062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2392008407231064260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.ShadowCaster2D
+  m_ShadowGroup: 0
+  m_Priority: 0
+  m_ComponentVersion: 5
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_AlphaCutoff: 0.1
+  m_ApplyToSortingLayers: 000000009b9ddc992796924059980e1a35dfe555c5444488
+  m_ShapePath:
+  - {x: -1.2279365, y: -0.89991945, z: 0}
+  - {x: -1.2279365, y: 0.8999195, z: 0}
+  - {x: 1.2279365, y: 0.8999195, z: 0}
+  - {x: 1.2279365, y: -0.89991945, z: 0}
+  m_ShapePathHash: 0
+  m_InstanceId: 0
+  m_ShadowShape2DComponent: {fileID: 2355731576180539821}
+  m_ShadowShape2DProvider:
+    rid: 7604291051712675840
+  m_ShadowCastingSource: 2
+  m_ShadowMesh:
+    m_Mesh: {fileID: 0}
+    m_LocalBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.9700012, y: 0.20999146, z: 0}
+    m_EdgeProcessing: 1
+    m_TrimEdge: 0.2
+    m_FlipX: 0
+    m_FlipY: 0
+    m_InitialTrim: 0
+  m_CastingOption: 1
+  m_PreviousTrimEdge: 0.2
+  m_PreviousEdgeProcessing: 1
+  m_PreviousShadowCastingSource: 2
+  m_PreviousShadowShape2DSource: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7604291051712675840
+      type: {class: ShadowShape2DProvider_SpriteRenderer, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data: 
 --- !u!4 &3670774744826894272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1184008479693043359, guid: 56af198a3d04acbe899f15c0fca21cdf, type: 3}

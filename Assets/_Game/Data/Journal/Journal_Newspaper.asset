@@ -16,6 +16,6 @@ MonoBehaviour:
   body: The famous victorain hospital sold to one of the most prestigious doctors
     of this decade, Dr Smith. Although his background is mysterious, his cancer research
     is outstanding.
-  image: {fileID: 0}
+  image: {fileID: 2391255840840876710, guid: db86c26d9f58fbb40b111a773aa86b11, type: 3}
   category: 0
   sortOrder: 10
