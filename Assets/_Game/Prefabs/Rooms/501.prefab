@@ -1641,7 +1641,7 @@ MonoBehaviour:
   noteTitle: Body Scans
   noteBody: "Looks like these monitors are still on.\n\nThere are some spots around
     the neck and underarms. \n\nMust be inflamed lymph nodes."
-  noteImage: {fileID: 21300000, guid: bd478b74d33bc504d82b697182338543, type: 3}
+  noteImage: {fileID: 21300000, guid: d303902c03e08df4ab6c44fcb5c02654, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
   onFinishedReading:
@@ -2535,10 +2535,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
   journalEntry: {fileID: 11400000, guid: f652ab65af5d9de9e75847a507aee175, type: 2}
-  noteTitle: 'Medical Cabinet '
+  noteTitle: 'Pills in the Cabinet '
   noteBody: "All pills are in foreign language. \n\nWhere can they possibly import
     them from?"
-  noteImage: {fileID: 0}
+  noteImage: {fileID: 21300000, guid: 1ba261257f4a30f4d8ed05496440b67c, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
   onFinishedReading:
@@ -2556,7 +2556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
-  displayName: Medical Cabinet
+  displayName: Pills in the Cabinet
   requireFlashlight: 1
   collectAfterReading: 0
 --- !u!61 &6904765239089871200

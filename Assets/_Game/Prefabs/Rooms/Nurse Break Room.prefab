@@ -586,6 +586,7 @@ GameObject:
   - component: {fileID: 6558372680566713360}
   - component: {fileID: 6907892372928412565}
   - component: {fileID: 6113316570895697000}
+  - component: {fileID: 2713954741925333227}
   m_Layer: 0
   m_Name: HealthDrink
   m_TagString: Untagged
@@ -601,13 +602,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970803750198119904}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.15, y: -4.14, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3420201, w: 0.9396927}
+  m_LocalPosition: {x: 2.69, y: -3.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5917113126998085996}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40}
 --- !u!212 &6907892372928412565
 SpriteRenderer:
   serializedVersion: 2
@@ -680,7 +681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
   journalEntry: {fileID: 0}
-  noteTitle: Health Drink
+  noteTitle: Health Potion
   noteBody: 'A green drink is lying on the floor.
 
 
@@ -692,6 +693,21 @@ MonoBehaviour:
   onFinishedReading:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2713954741925333227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970803750198119904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Health Potion
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1 &2140875532737751144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,9 +1966,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1083348519
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2689656218005662065, guid: 8196a5eba79aaa747be607fe09d28356, type: 3}
+  m_Sprite: {fileID: 8383280947113988711, guid: 207a46e41c94c9347bbe67d64d3eeeb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2998,6 +3014,9 @@ GameObject:
   - component: {fileID: 3029375336162757603}
   - component: {fileID: 4660702703923022510}
   - component: {fileID: 6327871190368696261}
+  - component: {fileID: 4055050294016006077}
+  - component: {fileID: 2306791876605078026}
+  - component: {fileID: 783368329005895945}
   m_Layer: 0
   m_Name: PlaneTickets
   m_TagString: Untagged
@@ -3014,7 +3033,7 @@ Transform:
   m_GameObject: {fileID: 8361751849399783214}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.24691443, w: 0.9690373}
-  m_LocalPosition: {x: 0.65833336, y: 0.33849713, z: 0}
+  m_LocalPosition: {x: 0.65833336, y: 0.458, z: 0}
   m_LocalScale: {x: 0.83333325, y: 0.83333325, z: 0.83333325}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3069,7 +3088,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 4a7378fc7577cdc4c86f9f86f5dc0342, type: 3}
+  m_Sprite: {fileID: 1334945768615719812, guid: 207a46e41c94c9347bbe67d64d3eeeb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3096,12 +3115,119 @@ MonoBehaviour:
   noteBody: "Machu Picchu (tickets expired 5th May 2025)\n\r\nJamie and I were supposed
     to travel together. We never managed to because of his illness. \n\nHe became
     too preoccupied with looking for the cure.\r\n"
-  noteImage: {fileID: 0}
+  noteImage: {fileID: 21300000, guid: d2bbf6a1b7d9acd4cb8db756bd42c57a, type: 3}
   noteImageWidth: 0
   noteImageHeight: 0
   onFinishedReading:
     m_PersistentCalls:
       m_Calls: []
+--- !u!61 &4055050294016006077
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361751849399783214}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 0.44}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.34, y: 0.44}
+  m_EdgeRadius: 0
+--- !u!61 &2306791876605078026
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361751849399783214}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.34, y: 0.44}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.62, y: 0.81}
+  m_EdgeRadius: 0
+--- !u!114 &783368329005895945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361751849399783214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Plane Tickets
+  requireFlashlight: 1
+  collectAfterReading: 1
 --- !u!1 &8397010320239310063
 GameObject:
   m_ObjectHideFlags: 0

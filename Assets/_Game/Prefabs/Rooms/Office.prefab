@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8603702899154634133}
   - component: {fileID: 195418559964306456}
   - component: {fileID: 7865667009147039233}
+  - component: {fileID: 1742906583287741601}
   m_Layer: 0
   m_Name: Diploma_0
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 47967779742180862}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6467156, y: 4.46, z: 0}
+  m_LocalPosition: {x: 2.32, y: 4.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9104136478300700862, guid: 276aaf74250f2d040b1d0e5bf8a10563, type: 3}
+  m_Sprite: {fileID: -8331167029391945122, guid: 207a46e41c94c9347bbe67d64d3eeeb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,6 +115,21 @@ MonoBehaviour:
   onFinishedReading:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1742906583287741601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47967779742180862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Doctor's Certificate
+  requireFlashlight: 1
+  collectAfterReading: 1
 --- !u!1 &101191895424556079
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 219020955525805442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 1.09, z: 0}
+  m_LocalPosition: {x: 3.5, y: 0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1008,6 +1024,97 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.379687, y: 0.66}
   m_EdgeRadius: 0
+--- !u!1 &1743911655799747249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941975615913024500}
+  - component: {fileID: 8203117578970311048}
+  m_Layer: 0
+  m_Name: Jamie asset 7_29
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &941975615913024500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743911655799747249}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.19, y: 1.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 732338507503558145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8203117578970311048
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743911655799747249}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 1083348519
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -8306625740277108874, guid: 207a46e41c94c9347bbe67d64d3eeeb0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.03, y: 1.98}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1 &2009368853939936240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,9 +1806,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
   journalEntry: {fileID: 0}
   noteTitle: Pills on the floor
-  noteBody: "Pill Description: Plerifoxin Roxabicin\n\nUsed for calming down the hallucinations
-    and is used as a relaxant after a traumatic operation. \n\nPossible Side Effects:
-    Prolonged and extremely deep sleep and dissociation."
+  noteBody: "Pill Description: Plerifoxin Roxabicin\n\nUsed for calming down the
+    hallucinations and is used as a relaxant after a traumatic operation. \n\nPossible
+    Side Effects: Prolonged and extremely deep sleep and dissociation."
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2018,8 +2125,9 @@ MonoBehaviour:
   noteBody: 'This is the doctor''s name card.
 
 
-    Clark. My dad always used to be proud of his surname. He was happy he had a son
-    who will be able to carry his heritage. '
+    Clark. My dad always used to
+    be proud of his surname. He was happy he had a son who will be able to carry
+    his heritage. '
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -2069,7 +2177,6 @@ Transform:
   - {fileID: 3467305190771838922}
   - {fileID: 249183373551932508}
   - {fileID: 6025637586660641362}
-  - {fileID: 6123144405987749509}
   - {fileID: 8611283006500503699}
   - {fileID: 5872318110284988597}
   - {fileID: 3462710041843021385}
@@ -2081,6 +2188,7 @@ Transform:
   - {fileID: 4124715137449988078}
   - {fileID: 518047865820658994}
   - {fileID: 553603720655504722}
+  - {fileID: 941975615913024500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4913091172626656892
@@ -2094,6 +2202,7 @@ GameObject:
   - component: {fileID: 249183373551932508}
   - component: {fileID: 8219262667983771881}
   - component: {fileID: 8046824379184205422}
+  - component: {fileID: 3518925353063300881}
   m_Layer: 0
   m_Name: JamieAndDadPortrait
   m_TagString: Untagged
@@ -2110,9 +2219,9 @@ Transform:
   m_GameObject: {fileID: 4913091172626656892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 3.86, z: 0}
-  m_LocalScale: {x: 1.55, y: 1.55, z: 1.55}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0.36, y: 4.18, z: 0}
+  m_LocalScale: {x: 1.55, y: 0.38, z: 1.55}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 732338507503558145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2198,6 +2307,21 @@ MonoBehaviour:
   onFinishedReading:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3518925353063300881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913091172626656892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Family Portrait
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!1 &5260272606195183049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,121 +2821,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.088, y: 0.704}
   m_EdgeRadius: 0
---- !u!1 &5929624349088551415
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6123144405987749509}
-  - component: {fileID: 4293202764946168327}
-  - component: {fileID: 4644404508986133873}
-  m_Layer: 0
-  m_Name: Mask
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6123144405987749509
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5929624349088551415}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.75, y: 3.11, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 732338507503558145}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4293202764946168327
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5929624349088551415}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 1083348519
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 659fa8c6d302c9d4b9a1af5cd00ed425, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.5625, y: 1.5625}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!114 &4644404508986133873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5929624349088551415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b884e95bf60f257ba8b624d98dd0bb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NoteItem
-  journalEntry: {fileID: 0}
-  noteTitle: A Rusty Gas Mask
-  noteBody: "The gas mask looks like it has been worn before. There must be a reason
-    why there's a mask in a hospital like this. Is it for the gas experiments so that
-    the staff can be safe? \n\nWhat if I am the one being influenced by this gas?"
-  noteImage: {fileID: 0}
-  noteImageWidth: 0
-  noteImageHeight: 0
-  onFinishedReading:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6574720396397213794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3522,8 +3531,8 @@ MonoBehaviour:
   journalEntry: {fileID: 0}
   noteTitle: Plane
   noteBody: "I remember getting this plane on my birthday last year.\n\nJamie bought
-    it for me as he knew I always wanted to be a pilot. \n\nI never wanted to be a
-    part of this. "
+    it for me as he knew I always wanted to be a pilot. \n\nI never wanted to be
+    a part of this. "
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
@@ -3711,7 +3720,7 @@ PrefabInstance:
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 7394865127018606099, guid: 780c4da85525173a4be4dc7b556ce82a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     m_RemovedComponents: []
@@ -3737,7 +3746,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2468959829914691415, guid: 65c9c0f52a3f821c78808642821ca0c7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 5880174946017103778, guid: 65c9c0f52a3f821c78808642821ca0c7, type: 3}
@@ -3881,7 +3890,7 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5495554337028186667, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1660d13d752ce40489a4c60f11750d83, type: 2}
     - target: {fileID: 7438046393518444935, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
@@ -3947,6 +3956,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 320763516135200966, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3179861534052739433}
+    - targetCorrespondingSourceObject: {fileID: 320763516135200966, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4619521129765615504}
   m_SourcePrefab: {fileID: 100100000, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
 --- !u!1 &3518989211007468307 stripped
 GameObject:
@@ -3966,15 +3978,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NoteItem
   journalEntry: {fileID: 0}
-  noteTitle: Old Computer
-  noteBody: "The laptop shows all the patient logs and the photographs from their
-    patient room cameras. \n\nYou see them slowly turn into monsters day by day."
+  noteTitle: Computer
+  noteBody: "There\u2019s a file with the name Experimentation Room.\r\n\r\nIt shows
+    pictures of patients being tied to the chair, being injected and tortured.\r\n\r\nThey
+    seem to slowly lose their human look and turn into monsters."
   noteImage: {fileID: 0}
   noteImageWidth: 0
   noteImageHeight: 0
   onFinishedReading:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4619521129765615504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518989211007468307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b550493208c25b438f4d551d1d339ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Jamie.Gameplay.ReadableInteractable
+  displayName: Computer
+  requireFlashlight: 1
+  collectAfterReading: 0
 --- !u!4 &6025637586660641362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7438046393518444935, guid: 267e87704b16832acb3f8486c87151ff, type: 3}
