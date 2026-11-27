@@ -19,8 +19,23 @@ namespace Jamie.Gameplay
         public override bool RequiresFlashlight =>
             requireFlashlight;
 
+        private void OnEnable()
+        {
+            if (GameSession.GetOrCreate().HasItem(item))
+                gameObject.SetActive(false);
+        }
+
+        public override bool CanInteract(WorldInteractor interactor)
+        {
+            return isActiveAndEnabled && interactor != null &&
+                !GameSession.GetOrCreate().HasItem(item);
+        }
+
         public override void Interact(WorldInteractor interactor)
         {
+            if (!CanInteract(interactor))
+                return;
+
             ItemInventory inventory =
                 interactor.Player.GetComponent<ItemInventory>();
 

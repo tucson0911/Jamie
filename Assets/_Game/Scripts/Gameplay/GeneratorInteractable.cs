@@ -20,7 +20,7 @@ namespace Jamie.Gameplay
 
         public bool IsPowered { get; private set; }
 
-        public override string Prompt => "E - Start generator";
+        public override string Prompt => "E - Pick up";
 
         public override bool RequiresFlashlight => false;
 
