@@ -23,7 +23,6 @@ namespace Jamie.Gameplay
                 if (floor == null || !floor.gameObject.activeInHierarchy)
                     continue;
 
-                // Floor geometry defines the room independently of its lighting.
                 Vector3 point = floor.transform.InverseTransformPoint(worldPosition);
                 Bounds bounds = floor.localBounds;
                 Vector3 scale = floor.transform.lossyScale;
