@@ -407,11 +407,25 @@ MonoBehaviour:
   - Master
   Banks:
   - Ambience
+  - Ambience.assets
+  - Ambience.streams
   - ambient_global
+  - ambient_global.assets
+  - ambient_global.streams
   - Encounters
+  - Encounters.assets
+  - Encounters.streams
+  - Master.assets
+  - Master.streams
   - Monster
+  - Monster.assets
+  - Monster.streams
   - Music
+  - Music.assets
+  - Music.streams
   - SFX
+  - SFX.assets
+  - SFX.streams
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
